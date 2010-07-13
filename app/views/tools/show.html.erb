@@ -1,0 +1,38 @@
+<p>
+  <b>Name:</b>
+  <%=h @tool.name %>
+</p>
+
+<p>
+  <b>Developer:</b>
+  <%=h @tool.developer %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%=h @tool.description %>
+</p>
+
+<p>
+  <b>Rating:</b>
+  <%=h @tool.rating %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%=h @tool.url %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%=h @tool.user_id %>
+</p>
+
+<p>
+  <b>Post:</b>
+  <%=h @tool.post_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_tool_path(@tool) %> |
+<%= link_to 'Back', tools_path %>
