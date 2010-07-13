@@ -9,7 +9,37 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100713025025) do
+ActiveRecord::Schema.define(:version => 20100713033702) do
+
+  create_table "posts", :force => true do |t|
+    t.string   "title"
+    t.string   "subject"
+    t.string   "body"
+    t.string   "body_bg_img"
+    t.integer  "user_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "sources", :force => true do |t|
+    t.string   "title"
+    t.string   "url"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tools", :force => true do |t|
+    t.string   "name"
+    t.string   "developer"
+    t.string   "description"
+    t.string   "rating"
+    t.string   "url"
+    t.integer  "user_id"
+    t.integer  "post_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"
