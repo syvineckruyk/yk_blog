@@ -1,0 +1,135 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+	<title><%= @title %> // yk.com</title>
+	<meta http-equiv="Content-Language" content="en-us" />
+	
+	<meta http-equiv="imagetoolbar" content="no" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	
+	<meta name="description" content="Description" />
+	<meta name="keywords" content="Keywords" />
+	
+	<meta name="author" content="yk.com" />
+	
+	<style type="text/css" media="all">@import "css/master.css";</style>
+<!--<script src="javascripts/prototype.js" type="text/javascript"></script>
+	<script src="javascripts/scriptaculous.js" type="text/javascript"></script> -->
+	<script type="text/javascript" src="javascripts/jquery-1.4.2.min.js"></script>
+</head>
+<body>
+<div id="page_container">
+	<div id="header">
+		<img src="images/logo_header.png" alt="yk.com logo" style="padding-bottom:-20px" />
+		<div id="login_box">
+			<img src="images/login_icon.png" align="left" alt="login_icon" />
+			<p align="justify">login:<br />
+			password:</p>
+		</div>
+	</div>
+	<div id="top_nav">
+		<div id="menu_items">
+			<a href="#nogo">Home</a>
+		</div>
+		<div id="follow_box">
+			<a id="tw_follow" href="#nogo" title="follow us on twitter"><span></span></a>
+			<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"><span></span></a>
+		</div>
+	</div>
+	<div id="post_box">
+		<div id="post_text">
+			<h1><%= @title %></h1>
+			<p><%= yield %>
+			</p>
+		</div>
+		<div class="meta_box" id="tool_box"><h2><img src="images/tools_icon.png" align="right" alt="tools_icon"/>tool_box:</h2>
+			<ul>
+				<li><a href="#nodo">Tool 1</a></li>
+				<li><a href="#nodo">Tool 2</a></li>
+				<li><a href="#nodo">Tool 3</a></li>	
+			</ul>
+		</div>
+		<div class="meta_box" id="post_sources"><h2><img src="images/sources_icon.png" align="right" alt="sources_icon"/>post_sources:</h2>
+			<ul>
+				<li><a href="#nodo">First source</a></li>
+				<li><a href="#nodo">Second source</a></li>
+				<li><a href="#nodo">Third source</a></li>
+				<li><a href="#nodo">Fourth source</a></li>
+			</ul>
+		</div>
+		<div class="meta_box" id="post_tags"><h2><img src="images/tags_icon.png" align="right" alt="tags-icon" />post_tags:</h2>
+			<ul>
+				<li><a href="#nodo">tag 1</a></li>
+				<li><a href="#nodo">tag 2</a></li>
+				<li><a href="#nodo">tag 3</a></li>
+			</ul>
+		</div>
+		<div id="post_footer">	
+			<h6>post_datetime: 
+				<script type="text/javascript">
+				var currentTime = new Date()
+				var month = currentTime.getMonth() + 1
+				var day = currentTime.getDate()
+				var year = currentTime.getFullYear()
+				document.write(month + "/" + day + "/" + year)
+				</script>
+			</h6>
+		</div>
+	</div>
+	<div id="bottom_nav">
+		<ul>
+			<li><a href="#nogo" title="Next post">Next post</a></li>
+			<li><a href="#nogo" title="Previous post">Previous post</a></li>
+		</ul>
+	</div>
+	<div id="footer">
+<!-- 	<a href="http://mysql.com">
+		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
+        src="http://www.mysql.com/common/logos/powered-by-mysql-88x31.png"
+        alt="This site runs MySQL" height="31" width="88"
+		align="right"/></a> -->
+	<a href="http://www.ruby-lang.org/en/">
+		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
+			src="images/ruby_logo.png"
+			alt="Built with Ruby"
+			align="right"/></a>
+	<a href="http://rubyonrails.org/">
+		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/rails_logo.png"
+		alt="Built with Rails" 
+		align="right"/></a>
+	<a href="http://www.gimp.org/">
+		<img style="border:0;width:41px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/gimp_logo.png" border="0"
+		alt="Graphics by GIMP"
+		align="right"/></a>
+	<a href="http://notepad-plus.sourceforge.net/uk/site.htm">
+		<img style="border:0;width:37px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/notepad_logo.png" border="0"
+		alt="Made with Notepad++"
+		align="right"/></a>
+	<a href="http://script.aculo.us/">
+		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/scriptaculous_logo.png" border="0"
+		alt="Using scriptaculous"
+		align="right"/></a>
+	<a href="http://prototypejs.org/">
+		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/prototype_logo.png" border="0"
+		alt="Using prototype"
+		align="right"/></a>
+	<a href="http://jigsaw.w3.org/css-validator/check/referer">
+		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
+		src="images/css_logo.gif"
+		alt="Valid CSS!" /></a>
+    <a href="http://validator.w3.org/check?uri=referer">
+		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
+        src="images/xhtml_logo.png"
+        alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
+	</div>
+</div>
+	<script type='text/javascript' src='javascripts/script.js'></script>
+</body>
+</html>
