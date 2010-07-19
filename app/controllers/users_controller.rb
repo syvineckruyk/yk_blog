@@ -2,7 +2,8 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
   def index
-    @users = User.all
+   @title = "Users"
+   @users = User.all
 
     respond_to do |format|
       format.html # index.html.erb

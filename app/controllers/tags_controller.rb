@@ -2,7 +2,8 @@ class TagsController < ApplicationController
   # GET /tags
   # GET /tags.xml
   def index
-    @tags = Tag.all
+    @title = "Tags"
+	@tags = Tag.all
 
     respond_to do |format|
       format.html # index.html.erb

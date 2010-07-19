@@ -2,7 +2,8 @@ class ToolsController < ApplicationController
   # GET /tools
   # GET /tools.xml
   def index
-    @tools = Tool.all
+    @title = "Tools"
+	@tools = Tool.all
 
     respond_to do |format|
       format.html # index.html.erb
