@@ -19,7 +19,7 @@ html, body{
 #login_box{
 background: black url(../images/login_box_bg.png) repeat-x;
 width:300px;
-height:65px;
+height:85px;
 margin: 30px 30px 30px 30px;
 float:right;
 border-style: groove;
@@ -28,6 +28,9 @@ border-color: #15191C;
 -moz-border-radius:	10px;
 -webkit-border-radius: 10px;
 
+}
+#login_submit{
+margin: -5px 5px 30px 30px;
 }
 #top_nav{
 	background: black url(../images/nav_bg.png) repeat-y;
@@ -47,10 +50,10 @@ display: inline;
 	text-decoration: none;
 	font-weight: bold;
 	word-spacing: 8px;
-	height:30px;
+	height:20px;
 	text-align:right;
 	margin: 5px 5px 5px 20px;
-	font-size: 20px
+	font-size: 12px
 }
  #menu_items  a:hover{
 	color: #ff8600;
@@ -58,10 +61,10 @@ display: inline;
 	text-decoration: none;
 	font-weight: bold;
 	word-spacing: 8px;
-	height:30px;
+	height:20px;
 	text-align:right;
 	margin: 5px 5px 5px 20px;
-	font-size: 20px;
+	font-size: 12px;
 } 
 #follow_box {
 	height: 30px;
