@@ -1,0 +1,15 @@
+<img src="<%=Gchart.bar(:title => 'Posts,Users,Tools,Tags',:data => [[20,45,60,50,80,40,100],[16,47,32,98,54,56,78],[1,3,6,7,8,12,23],[0,30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Feb|Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '900', 
+:legend => ['Posts','Users','Tools','Tags']) %>">
+<br>
+<br>
+<br>
+<br>
+<img src="<%=Gchart.sparkline(:title => 'P',:data => [20,45,60,50,80,40,100],:axis_labels => ['Feb|Mar|Apr|May|Jun|Jul|Aug'],:bar_colors => '2B252A',:width => '30',:height => '60',:bg_color => '545344', :bar_colors => 'ff8600', :chart_background => '545344') %>">
+<br>
+<img src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:axis_labels => ['Feb|Mar|Apr|May|Jun|Jul|Aug'],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">
+<br>
+<img src="<%=Gchart.bar(:data => [20,45,60],:bar_colors => '2B252A',:width => '30',:height => '30',:bg_color => '00051115', :bar_colors => 'ff8600', :bar_width_and_spacing => '8,2') %>">
+<br>
+<br>
+<img src="<%=Gchart.line(:title => 'Posts,Users,Tools,Tags',:data => [[20,45,60,50,80,40,100],[16,47,32,98,54,56,78],[1,3,6,7,8,12,23],[0,30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Feb|Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:width => '900', :bar_colors => '320043,D90016,AD87CF,FF9E00',:legend => ['Posts','Users','Tools','Tags'], :bg_color => '051115', :bg_type => 'gradient') %>">
+

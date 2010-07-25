@@ -182,7 +182,7 @@ float:left;
 	height:30px;
 	margin-top:0px
 }
-#bottom_nav  a{
+#bottom_nav  a.post_nav{
 	display:block;
 	color: #87845a;
 	letter-spacing: 1px;
@@ -194,7 +194,7 @@ float:left;
 	float:right;
 	margin: 7px 5px 0px 20px;
 }
-#bottom_nav  a:hover{
+#bottom_nav  a.post_nav:hover{
 	display:block;
 	color: #ff8600;
 	letter-spacing: 1px;
@@ -205,6 +205,10 @@ float:left;
 	font-size: 12px;
 	float:right;
 	margin: 7px 5px 0px 20px;
+}
+#bottom_nav img{
+	float: left;
+	padding: 5px 0px 0px 5px;
 }
 #bottom_nav ul{
 	text-align:right;
@@ -238,4 +242,7 @@ h2{
 }
 h6{
 	text-align:right;
+}
+hr{
+	width: 900px;
 }
