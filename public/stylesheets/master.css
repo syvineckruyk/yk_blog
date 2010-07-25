@@ -44,6 +44,10 @@ margin: -5px 5px 30px 30px;
 #menu_items li{
 display: inline;
 }
+#menu_items img{
+height: 15px;
+margin: 5px 0px 0px 0px;
+}
 #menu_items  a{
 	color: #87845a;
 	letter-spacing: 2px;
@@ -104,6 +108,18 @@ background-color: white;
 margin: 10px 20px 5px 20px;
 -moz-border-radius:	10px;
 -webkit-border-radius: 10px;
+}
+#left_post_header{
+clear: none;
+float: left;
+padding: 0px 0px 0px 0px;
+width: 100px;
+}
+#right_post_header{
+clear: none;
+float: right;
+padding: 5px 0px 0px 0px;
+width: 400px;
 }
 
 #post_box div.meta_box{
