@@ -131,12 +131,17 @@ clear: both;
 width: 900px;
 height: 30px;
 }
-
+#message_header_left_qr{
+clear: none;
+float: left;
+height: 30px;
+width: 40px;
+}
 #message_header_left{
 clear: none;
 float: left;
 height: 30px;
-width: 860px;
+width: 820px;
 }
 
 #message_header_right{
