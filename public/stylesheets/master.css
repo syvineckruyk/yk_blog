@@ -7,7 +7,7 @@ html, body{
 }
 #page_container{
 	width: 960px;
-	background-color: #2B252A;
+		background-color: #2B252A;
 	margin: auto;
 }
 #header{
@@ -30,7 +30,7 @@ border-color: #15191C;
 
 }
 #login_submit{
-margin: -5px 5px 30px 30px;
+	margin: -5px 5px 30px 30px;
 }
 #top_nav{
 	background: black url(../images/nav_bg.png) repeat-y;
@@ -84,7 +84,7 @@ margin: 5px 0px 0px 0px;
   margin: 0px 20px 5px 5px;
 }
 #tw_follow:hover{
-background-position: 0px 0px;
+	background-position: 0px 0px;
 } 
 #tw_follow span{
 	display: none;
@@ -98,16 +98,20 @@ background-position: 0px 0px;
   margin: 0px 5px 5px 5px;
 }
 #rss_follow:hover{
-background-position: 0px 0px;
+	background-position: 0px 0px;
 } 
 #rss_follow span{
-display: none;
+	display: none;
 }
 #post_box{
-background-color: white;
-margin: 10px 20px 5px 20px;
--moz-border-radius:	10px;
--webkit-border-radius: 10px;
+	background-color: white;
+	margin: 10px 20px 5px 20px;
+	-moz-border-radius:	10px;
+	-webkit-border-radius: 10px;
+	clear: both;
+}
+#post_header{
+clear: both;
 }
 #left_post_header{
 clear: none;
@@ -118,10 +122,37 @@ width: 100px;
 #right_post_header{
 clear: none;
 float: right;
-padding: 5px 0px 0px 0px;
+padding: 0px 0px 0px 0px;
 width: 400px;
 }
 
+#message_header{
+clear: both;
+width: 900px;
+height: 30px;
+}
+
+#message_header_left{
+clear: none;
+float: left;
+height: 30px;
+width: 860px;
+}
+
+#message_header_right{
+clear: none;
+float: right;
+height: 30px;
+width: 40px;
+}
+#message{
+clear: both;
+width: 900px;
+}
+#message img{
+float: right;
+vertical-align: right;
+}
 #post_box div.meta_box{
 	border-style:groove;
 	border-width: 2px;
@@ -175,7 +206,7 @@ float:left;
 #post_footer{
 	clear:both;
 	margin: 5px 5px 0px 5px;
-}
+br}
 #bottom_nav{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;
@@ -240,9 +271,21 @@ h2{
 	-moz-border-radius:	10px;
     -webkit-border-radius: 10px;
 }
+h4{
+float: left;
+height: 10px;
+margin: 0px 0px 0px 0px;
+font-size: 20px;
+}
 h6{
 	text-align:right;
 }
 hr{
 	width: 900px;
+}
+p.author{
+font-size: 10px;
+text-align: right;
+margin: 8px 20px 0px 0px;
+vertical-align:middle;
 }
