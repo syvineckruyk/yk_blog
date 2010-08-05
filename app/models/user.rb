@@ -11,7 +11,12 @@
 #
 
 class User < ActiveRecord::Base
-	attr_accessor :name, :email
+	EmailRegex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+	attr_accessible(:name, :email)
 	has_many	:posts
 	has_many	:tools
+	validates_presence_of(:name, :email)
+	validates_length_of :name , :maximum => 50
+	validates_format_of :email, :with => EmailRegex
+	validates_uniqueness_of :email, :case_sensitive => false
 end

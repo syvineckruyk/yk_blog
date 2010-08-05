@@ -11,6 +11,8 @@
 #
 
 class Tag < ActiveRecord::Base
-	attr_accessor :tag
+	attr_accessible :tag
 	belongs_to	:post
+	validates_presence_of :tag
+	validates_length_of :tag , :maximum => 15
 end

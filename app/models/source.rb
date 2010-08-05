@@ -12,6 +12,8 @@
 #
 
 class Source < ActiveRecord::Base
-	attr_accessor :title, :url
+	attr_accessible(:title, :url)
 	belongs_to	:post
+	validates_presence_of :title
+	validates_length_of :title , :maximum => 50
 end

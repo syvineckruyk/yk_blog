@@ -16,7 +16,10 @@
 #
 
 class Tool < ActiveRecord::Base
-    attr_accessor :name , :developer , :description, :rating, :url
+    attr_accessible(:name, :developer, :description, :rating, :url)
 	belongs_to	:user
 	belongs_to	:post
+	validates_presence_of(:name, :developer, :url)
+	validates_length_of :name , :maximum => 50
+	
 end
