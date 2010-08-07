@@ -1,13 +1,15 @@
-<p>
-  <b>Name:</b>
+<div id="user_badge">
+  <div id="user_badge_gravatar">
+  <%= gravatar_for @user %>
+  </div>
+  <div id="user_badge_details">
   <%=h @user.name %>
-</p>
-
-<p>
-  <b>Email:</b>
   <%=h @user.email %>
-</p>
-
-
+  </div>
+</div>
+<div id="user_show_navigation">
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+</div>
+
+

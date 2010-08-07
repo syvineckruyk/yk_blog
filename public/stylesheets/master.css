@@ -111,21 +111,49 @@ margin: 5px 0px 0px 0px;
 	clear: both;
 }
 #post_header{
-clear: both;
-}
-#left_post_header{
-clear: none;
-float: left;
-padding: 0px 0px 0px 0px;
-width: 100px;
-}
-#right_post_header{
-clear: none;
-float: right;
-padding: 0px 0px 0px 0px;
-width: 400px;
+width: 900px;
+height: 80px;
 }
 
+
+#left_post_header{
+clear: right;
+float: left;
+width: 100px;
+height: 80px;
+}
+#right_post_header{
+float: right;
+clear: right;
+width: 800px;
+height: 80px;
+}
+#user_badge{
+float: left;
+clear: both;
+height: 50px;
+width: 900px;
+}
+#user_badge_gravatar{
+float: left;
+clear: left;
+width: 50px;
+height: 50px;
+}
+#user_badge_details{
+float: left;
+clear: right;
+width: 250px;
+height: 50px;
+padding-left: 10px;
+}
+#user_badge img.gravatar{
+vertical-align: bottom;
+}
+#user_show_navigation{
+clear: both;
+padding-top: 20px;
+}
 #message_header{
 clear: both;
 width: 900px;
@@ -143,7 +171,6 @@ float: left;
 height: 30px;
 width: 820px;
 }
-
 #message_header_right{
 clear: none;
 float: right;
@@ -183,7 +210,7 @@ vertical-align: right;
 #post_text{
 background-color: white;
 margin: 10px 10px 10px 10px;
-width:500px;
+width:900px;
 float:left;
 }
 #tool_box{
@@ -211,12 +238,12 @@ float:left;
 #post_footer{
 	clear:both;
 	margin: 5px 5px 0px 5px;
-br}
+}
 #bottom_nav{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;
 	height:30px;
-	margin-top:0px
+	margin-top:0px;
 }
 #bottom_nav  a.post_nav{
 	display:block;
