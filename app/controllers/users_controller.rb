@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
-  def index
+def index
    @title = "Users"
    @users = User.all
 
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.xml
   def show
-    @user = User.find(params[:id])
+  	@user = User.find(params[:id])
 	@title = "User"
 
     respond_to do |format|

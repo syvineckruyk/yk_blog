@@ -177,6 +177,10 @@ float: right;
 height: 30px;
 width: 40px;
 }
+#user_header_right_qr{
+float: right;
+
+}
 #message{
 clear: both;
 width: 900px;
