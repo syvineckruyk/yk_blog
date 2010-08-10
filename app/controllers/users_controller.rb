@@ -16,7 +16,6 @@ def index
   def show
   	@user = User.find(params[:id])
 	@title = "User"
-	@qrcode_url = user_url(@user)
 
     respond_to do |format|
       format.html # show.html.erb
