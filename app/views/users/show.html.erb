@@ -5,7 +5,11 @@
   </div>
   <div id="user_badge_details">
   	<%=h @user.name %>
-  	<%=h mail_to @user.email %>
+	<%= in_place_editor_field :user, :email%>
+	<div id="activator">Change Password</div>
+	<%= in_place_editor_field :user, :password, {}, :external_control => "activator" %>
+	<%= in_place_editor_field :user, 'password' %>
+
   </div>
   <div id="user_header_right_qr">
   	<%= link_to qrcode(user_url(@user), 2, 4, 'my-qrcode'),user_url(@user) %>
@@ -13,10 +17,19 @@
   <div id="user_header_hr">
   	<hr>
   </div>
+   
+ <!--  
+   <% form_for(@user) do |f| %>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>    <%= f.submit 'Update' %>
+  </p>
+  <% end %>
+ -->
 </div>
 <div id="user_show_navigation">
-<%= link_to image_tag("arrow-left-2.png", :alt => "back"), users_path %> 
-<%= link_to image_tag("edit.png", :alt => "edit"), edit_user_path(@user) %>
+  <%= link_to image_tag("arrow-left-2.png", :alt => "back"), users_path %> 
+  <%= link_to image_tag("edit.png", :alt => "edit"), edit_user_path(@user) %>
 </div>
 <div id="post_footer">	
   <h6>record last updated: <%= @user.updated_at %></h6>

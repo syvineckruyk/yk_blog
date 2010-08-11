@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
 		end
 		
 		def encrypt(string)
-			secure_hash("#{salt}#{string}") # to be replaced
+			secure_hash("#{salt}#{string}") 
 		end
 		
 		def make_salt

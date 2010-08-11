@@ -1,10 +1,12 @@
 class UsersController < ApplicationController
   # GET /users
   # GET /users.xml
+  in_place_edit_for :user, :email 
+  in_place_edit_for :user, :password
 def index
    @title = "Users"
    @users = User.all
-
+	
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @users }
@@ -16,8 +18,7 @@ def index
   def show
   	@user = User.find(params[:id])
 	@title = "User"
-
-    respond_to do |format|
+	  respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
     end
