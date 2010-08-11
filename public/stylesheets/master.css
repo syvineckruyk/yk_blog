@@ -150,9 +150,20 @@ padding-left: 10px;
 #user_badge img.gravatar{
 vertical-align: bottom;
 }
+#user_header_right_qr{
+clear: right;
+float: right;
+margin: 0px 0px 0px 0px;
+}
+#user_header_hr{
+float: right;
+}
 #user_show_navigation{
+float: auto;
+margin-left: 400px;
+padding: 0px 0px 0px 0px;
 clear: both;
-padding-top: 20px;
+padding-top: 40px;
 }
 #message_header{
 clear: both;
@@ -176,10 +187,6 @@ clear: none;
 float: right;
 height: 30px;
 width: 40px;
-}
-#user_header_right_qr{
-float: right;
-
 }
 #message{
 clear: both;
