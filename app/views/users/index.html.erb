@@ -8,11 +8,11 @@
   </div>  
   <div id="user_badge_details">
   	<%=h user.name %><br>
-    	<%=h user.email %>
+    <%=h user.email %>
   </div>
 <div id="user_badge_details_right">
-  <%= link_to 'Show', user %>
-  <%= link_to 'Destroy', user, :confirm => 'Are you sure?', :method => :delete %></td>
+  <%= link_to image_tag("edit-find-user.png", :alt => "show user profile") , user %>
+  <%= link_to image_tag("user-delete-2.png", :alt => "delete user"), user, :confirm => 'Are you sure?', :method => :delete %>
 </div>
 </div>
 <% end %>
@@ -21,4 +21,4 @@
 <div id="user_header_hr">
 <hr>
 </div>
-<%= link_to 'New user', new_user_path %>
+<%= link_to image_tag("user-new-3.png", :alt => "create new user"), new_user_path %>

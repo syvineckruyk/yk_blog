@@ -146,13 +146,17 @@ float: left;
 clear: right;
 width: 250px;
 height: 50px;
-padding-left: 10px;
+padding-left: 5px;
 }
 #user_badge_details_right{
 float: right;
 clear: right;
 width: 100px;
 height: 50px;
+padding-left: 10px;
+padding-top: 5px;
+}
+#user_badge_details_right img{
 padding-left: 10px;
 }
 #user_badge img.gravatar{
