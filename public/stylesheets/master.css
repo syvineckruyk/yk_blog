@@ -136,14 +136,22 @@ width: 900px;
 }
 #user_badge_gravatar{
 float: left;
-clear: left;
+clear: both;
 width: 50px;
 height: 50px;
+padding: 0px 0px 0px 0px;
 }
 #user_badge_details{
 float: left;
 clear: right;
 width: 250px;
+height: 50px;
+padding-left: 10px;
+}
+#user_badge_details_right{
+float: right;
+clear: right;
+width: 100px;
 height: 50px;
 padding-left: 10px;
 }
@@ -157,6 +165,7 @@ margin: 0px 0px 0px 0px;
 }
 #user_header_hr{
 float: right;
+margin: 5px 0px 0px 0px;
 }
 #user_show_navigation{
 float: auto;
@@ -324,7 +333,9 @@ h6{
 	text-align:right;
 }
 hr{
-	width: 900px;
+width: 900px;
+clear: both;
+margin: 0px 0px 5px 0px;
 }
 p.author{
 font-size: 10px;
