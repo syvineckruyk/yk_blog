@@ -10,10 +10,20 @@
   	<%=h user.name %><br>
     <%=h user.email %>
   </div>
-<div id="user_badge_details_right">
-  <%= link_to image_tag("edit-find-user.png", :alt => "show user profile") , user %>
-  <%= link_to image_tag("user-delete-2.png", :alt => "delete user"), user, :confirm => 'Are you sure?', :method => :delete %>
-</div>
+  <div id="user_badge_posts">
+	<p>5 Posts</p>
+  </div>
+  <div id="user_badge_tags">
+	<p>5 Tags</p>
+  </div>
+  <div id="user_badge_tools">
+	<p>5 Tools</p>
+  </div>
+   
+  <div id="user_badge_details_right">
+   	<%= link_to image_tag("edit-find-user.png", :alt => "show user profile") , user %>
+  	<%= link_to image_tag("user-delete-2.png", :alt => "delete user"), user, :confirm => 'Are you sure?', :method => :delete %>
+  </div>
 </div>
 <% end %>
 
