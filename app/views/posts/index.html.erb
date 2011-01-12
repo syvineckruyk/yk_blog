@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
 <!--<h1>Listing posts</h1>-->
 
 
@@ -11,16 +12,20 @@
   </tr>
 -->
 <% @posts.each do |post| %>
+
+
 <div id="list_post">
-  <div id="list_post_title">
-  <%=h post.title %><br>
+  <div id="list_post_background">
   </div>
-  <div id="user_badge_gravatar">
-<%= gravatar_for post.user %>
-<%= post.user.name %>
+  <div id="list_post_gravatar">
+	<%= gravatar_for post.user %>
+	<!--<p class="list_post_user_name"><%= post.user.name %></p>-->
+  </div>
+  <div id="list_post_title">
+  	<h4 class="list_post_title" id="list_post_title_text"><%=h post.title %><br></h4>
   </div> 
   <div id="list_post_body">
-    	<%=h post.body %>
+    	<p><%=h post.body %></p>
     	<!--<%=h post.body_bg_img %>
 	<%=h post.subject %>
 	<%=h post.user_id %> -->
