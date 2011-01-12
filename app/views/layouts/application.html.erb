@@ -25,24 +25,26 @@
 	<div id="header">
 		<!-- <img src="images/logo_header.png" alt="yk.com logo" style="padding-bottom:-20px" /> -->
 		<%= image_tag("logo_header.png", :alt => "yk.com logo") %>
+<!--		
 		<div id="login_box">
 			<img src="/images/login_icon.png" align="left" alt="login_icon" />
 			<p align="justify">login:<br />
 			password:</p>
 			<p id="login_submit" align="right">submit</p>
 		</div>
+-->
 	</div>
 	<div id="top_nav">
 		<div id="menu_items">
 			<a href="/pages/home/">Home</a>
 			<a href="/posts/">
-<img class="menu_sparkline"  src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">Posts</a>
+<!-- <img class="menu_sparkline"  src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Posts</a> 
 			<a href="/tools/">
-<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">Tools</a>
+<!--<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Tools</a>
 			<a href="/tags/">
-<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">Tags</a>
+<!--<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Tags</a>
 			<a href="/users/">
-<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">Users</a>
+<!--<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Users</a>
 		</div>
 		<div id="follow_box">
 			<a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"><span></span></a>
@@ -53,10 +55,10 @@
 		<div id="post_text">
 			<div id="post_header">
 				<div id="left_post_header">
-				<h1><%= h @title %></h1>
+				<!--<h1><%= h @title %></h1>--> 
 				</div>
 				<div id="right_post_header">
-			<img src="<%=Gchart.bar(:data => [[45,60,50,80,40,100],[47,32,98,54,56,78],[3,6,7,8,12,23],[30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '800',:height=>'80',:legend =>['Posts','Users','Tools','Tags']) %> ">
+			<!--<img src="<%=Gchart.bar(:data => [[45,60,50,80,40,100],[47,32,98,54,56,78],[3,6,7,8,12,23],[30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '800',:height=>'80',:legend =>['Posts','Users','Tools','Tags']) %> ">  -->
 				</div>
 			</div>				
 				<p><%= yield %></p>

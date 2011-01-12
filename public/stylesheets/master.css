@@ -112,7 +112,7 @@ margin: 5px 0px 0px 0px;
 }
 #post_header{
 width: 900px;
-height: 80px;
+height: 10px;
 }
 
 
@@ -120,13 +120,13 @@ height: 80px;
 clear: right;
 float: left;
 width: 100px;
-height: 80px;
+height: 10px;
 }
 #right_post_header{
 float: right;
 clear: right;
 width: 800px;
-height: 80px;
+height: 10px;
 }
 #user_badge{
 float: left;
