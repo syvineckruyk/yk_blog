@@ -26,7 +26,10 @@
   	<!--<p><%=h post.subject %>...</p>
     	<%=h post.body_bg_img %>
 	<%=h post.user_id %> -->
-  </div>	
+  </div>
+	<div id="list_post_tags">
+		<p><%= post.tags %></p>
+	</div>
   <!--div id="list_post_actions">
     	<%= link_to 'Show', post %>
     	<%= link_to 'Edit', edit_post_path(post) %>
@@ -35,9 +38,5 @@
   </div>-->
 <% end %>
 </div>
-<div id="list_post_tags">
-<p><%= post.tags.count %></p>
-</div>
-</a>
 <%end %>
 <br />
