@@ -1,7 +1,5 @@
 <%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
 <!--<h1>Listing posts</h1>-->
-
-
 <!--
   <tr>
     <th>Title</th>
@@ -12,9 +10,8 @@
   </tr>
 -->
 <% @posts.each do |post| %>
-
-
 <div id="list_post">
+<% link_to post do %>
   <div id="list_post_background">
   </div>
   <div id="list_post_gravatar">
@@ -25,19 +22,22 @@
   	<h4 class="list_post_title" id="list_post_title_text"><%=h post.title %><br></h4>
   </div> 
   <div id="list_post_body">
-    	<p><%=h post.body %></p>
-    	<!--<%=h post.body_bg_img %>
-	<%=h post.subject %>
+  	<%=h post.body.first(145) %>
+  	<!--<p><%=h post.subject %>...</p>
+    	<%=h post.body_bg_img %>
 	<%=h post.user_id %> -->
   </div>	
-  <div id="list_post_actions">
+  <!--div id="list_post_actions">
     	<%= link_to 'Show', post %>
     	<%= link_to 'Edit', edit_post_path(post) %>
 	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 	<%= link_to 'New post', new_post_path %>
-  </div>
-</div>
+  </div>-->
 <% end %>
+</div>
+<div id="list_post_tags">
+<p><%= post.tags.count %></p>
+</div>
+</a>
+<%end %>
 <br />
-
-

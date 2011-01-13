@@ -4,7 +4,6 @@ class PostsController < ApplicationController
   def index
     @title = "Posts"
 	@posts = Post.all
-
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }

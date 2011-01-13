@@ -2,7 +2,9 @@
 #list_post{
 	position: relative;
 	width:600px;
-	height:85px;
+	clear: both;
+	margin-bottom: 12px;
+	float: left;
 }
 #list_post_background{
 	background: #87845a;
@@ -41,20 +43,30 @@
 }
 
 #list_post_title{
-	float: right;
+	float: left;
 	position: relative;
 	clear: right;
+	width: 80%;
+	height: 10px;
+	margin: 6px 0px 6px 0px;
 }
 #list_post_gravatar{
+	width: 10%;
 	float: left;
 	position: relative;
 	margin: 16px 16px 16px 16px;
-	clear: both;
+	float: auto;
 }
 #list_post_body{
-	position: relative;
+	height: 60%;
+	width: 80%;
+	float: left;
+	clear: right;
+	margin: 10px 1px 1px 1px;
+	font-size: 14px;
 }
 #list_post_actions{
+	position: relative;
 }
 #list_post p.list_post_user_name{
 	font-size: 12px;
@@ -65,9 +77,8 @@
 	letter-spacing: 2px;
 	text-decoration: none;
 	font-weight: bold;
-	word-spacing: 8px;
 	height:20px;
-	text-align:right;
+/*	text-align:left;
 	margin: 5px 5px 5px 20px;
-	font-size: 20px;
+	font-size: 20px; */
 } 
