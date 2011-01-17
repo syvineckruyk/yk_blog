@@ -2,6 +2,7 @@
 #list_post{
 	position: relative;
 	width:600px;
+	height:100px;
 	clear: both;
 	margin-bottom: 12px;
 	float: left;
@@ -46,7 +47,7 @@
 	float: left;
 	position: relative;
 	clear: right;
-	width: 80%;
+	width: 84%;
 	height: 10px;
 	margin: 6px 0px 6px 0px;
 }
@@ -56,10 +57,19 @@
 	position: relative;
 	margin: 16px 16px 16px 16px;
 	float: auto;
+	height: 100%;
+	font-size: 9px;
+	color: #2B252A;
+}
+#list_post_gravatar img:hover{
+	/* for IE */
+	filter:alpha(opacity=60);
+	/* CSS3 standard */
+	opacity:0.6;
 }
 #list_post_body{
-	height: 60%;
-	width: 80%;
+	height: 40px;
+	width: 84%;
 	float: left;
 	clear: right;
 	margin: 10px 1px 1px 1px;
@@ -81,4 +91,18 @@
 /*	text-align:left;
 	margin: 5px 5px 5px 20px;
 	font-size: 20px; */
-} 
+}
+#list_post_tags{
+	width: 84%;
+	font-size: 11px;;
+	position: relative;
+	float: left;
+	word-spacing: 6px;
+}
+#list_post_tags a{
+	color: #87845a;
+}
+#list_post_tags a:hover{
+	color: #ff8600;
+}
+

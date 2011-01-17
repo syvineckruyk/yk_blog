@@ -15,7 +15,13 @@
   <div id="list_post_background">
   </div>
   <div id="list_post_gravatar">
-	<%= gravatar_for post.user %>
+  	<% link_to user_path(post.user) do %>
+  	<%= gravatar_for post.user %>
+  	<% end %>
+  	<p>
+  		<%= time_ago_in_words(post.created_at) %>
+  		ago
+  	</p>
 	<!--<p class="list_post_user_name"><%= post.user.name %></p>-->
   </div>
   <div id="list_post_title">
@@ -28,9 +34,16 @@
 	<%=h post.user_id %> -->
   </div>
 	<div id="list_post_tags">
-		<p><%= post.tags %></p>
+		<% @tags = post.tags %>
+		<p id="post_tag_links">
+		<% @tags.each do |tag| %>
+		<%= link_to tag.tag %>
+		<%end%>
+		</p>
 	</div>
-  <!--div id="list_post_actions">
+
+	
+	<!--div id="list_post_actions">
     	<%= link_to 'Show', post %>
     	<%= link_to 'Edit', edit_post_path(post) %>
 	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
