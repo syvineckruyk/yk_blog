@@ -3,7 +3,7 @@
 	position: relative;
 	width:600px;
 	height:100px;
-	clear: both;
+	clear: left;
 	margin-bottom: 12px;
 	float: left;
 }
@@ -60,12 +60,17 @@
 	height: 100%;
 	font-size: 9px;
 	color: #2B252A;
+	/* for IE */
+	filter:alpha(opacity=90);
+	/* CSS3 standard */
+	opacity:0.9;
+	
 }
 #list_post_gravatar img:hover{
 	/* for IE */
-	filter:alpha(opacity=60);
+	filter:alpha(opacity=30);
 	/* CSS3 standard */
-	opacity:0.6;
+	opacity:0.3;
 }
 #list_post_body{
 	height: 40px;
@@ -105,4 +110,51 @@
 #list_post_tags a:hover{
 	color: #ff8600;
 }
-
+#tag_box {
+float: right;
+width: 281px;
+height: 212px;
+color: black;
+position: relative;
+margin: 0px 7px 5px 12px;
+}
+#tag_box_background {
+width: 281px;
+height: 212px;
+background: #2B252A;
+/* for IE */
+filter:alpha(opacity=10);
+/* CSS3 standard */
+opacity:0.1;
+border-style: groove;
+border-width: 2px;
+border-color: #15191C;
+-moz-border-radius:	10px;
+-webkit-border-radius: 10px;
+position: absolute;	
+}
+#tag_box_tags {
+margin: 10px 10px 10px 10px;	
+position: relative;
+}
+#tag_box_tags a{
+/* for IE */
+filter:alpha(opacity=40);
+/* CSS3 standard */
+opacity:0.4;
+}
+#tag_box_tags a:hover{
+/* for IE */
+filter:alpha(opacity=100);
+/* CSS3 standard */
+opacity:1.0;
+}
+#tag_box_header p{
+/* for IE */
+filter:alpha(opacity=20);
+/* CSS3 standard */
+opacity:0.2;
+float: left;
+clear: left;
+margin: 10px 10px 0px 10px;
+}

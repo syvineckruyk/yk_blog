@@ -9,6 +9,19 @@
     <th>User</th>
   </tr>
 -->
+<div id="tag_box">
+<div id="tag_box_background">
+</div>
+	<div id="tag_box_header">
+	<p>tags</p>
+	</div>
+	<div id="tag_box_tags">
+	<% @tag_box_tags = Tag.all %>
+	<% @tag_box_tags.each do |tag| %>
+		<%= link_to tag.tag,tag_url(tag) %>
+	<% end %>
+	</div>
+</div>
 <% @posts.each do |post| %>
 <div id="list_post">
 <% link_to post do %>
