@@ -18,7 +18,7 @@
 	<div id="tag_box_tags">
 	<% @tag_box_tags = Tag.all %>
 	<% @tag_box_tags.each do |tag| %>
-		<%= link_to tag.tag,tag_url(tag) %>
+		<%= link_to tag.tag,tag_path(tag) %>
 	<% end %>
 	</div>
 </div>
