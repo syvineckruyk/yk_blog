@@ -18,9 +18,8 @@ class Post < ActiveRecord::Base
 	belongs_to	:user
 	has_many	:tools
 	has_many	:sources
-	has_many	:tags
 	validates_presence_of(:title, :subject, :body)
 	validates_length_of :title , :maximum => 25
 	validates_length_of :subject , :maximum => 15
-	
+	acts_as_taggable	
 end

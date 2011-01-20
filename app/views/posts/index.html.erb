@@ -16,9 +16,9 @@
 	<p>tags</p>
 	</div>
 	<div id="tag_box_tags">
-	<% @tag_box_tags = Tag.all %>
+	<% @tag_box_tags = Tag.find(:all) %>
 	<% @tag_box_tags.each do |tag| %>
-		<%= link_to tag.tag,tag_url(tag) %>
+		<%= link_to tag.name %>
 	<% end %>
 	</div>
 </div>
@@ -47,14 +47,13 @@
 	<%=h post.user_id %> -->
   </div>
 	<div id="list_post_tags">
-		<% @tags = post.tags %>
+		<% @tags = post.tag_list %>
 		<p id="post_tag_links">
 		<% @tags.each do |tag| %>
-		<%= link_to tag.tag %>
+		<%= link_to tag  %>
 		<%end%>
 		</p>
 	</div>
-
 	
 	<!--div id="list_post_actions">
     	<%= link_to 'Show', post %>
