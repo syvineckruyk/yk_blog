@@ -1,0 +1,67 @@
+<%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
+<!--<h1>Listing posts</h1>-->
+<!--
+  <tr>
+    <th>Title</th>
+    <th>Subject</th>
+    <th>Body</th>
+    <th>Body bg img</th>
+    <th>User</th>
+  </tr>
+-->
+<div id="tag_box">
+<div id="tag_box_background">
+</div>
+	<div id="tag_box_header">
+	<p>tags</p>
+	</div>
+	<div id="tag_box_tags">
+	<% @tag_box_tags = Tag.find(:all) %>
+	<% @tag_box_tags.each do |tag| %>
+		<%= link_to tag.name %>
+	<% end %>
+	</div>
+</div>
+<% @posts.each do |post| %>
+<div id="list_post">
+<% link_to post do %>
+  <div id="list_post_background">
+  </div>
+  <div id="list_post_gravatar">
+  	<% link_to user_path(post.user) do %>
+  	<%= gravatar_for post.user %>
+  	<% end %>
+  	<p>
+  		<%= time_ago_in_words(post.created_at) %>
+  		ago
+  	</p>
+	<!--<p class="list_post_user_name"><%= post.user.name %></p>-->
+  </div>
+  <div id="list_post_title">
+  	<h4 class="list_post_title" id="list_post_title_text"><%=h post.title %><br></h4>
+  </div> 
+  <div id="list_post_body">
+  	<%=h post.body.first(145) %>
+  	<!--<p><%=h post.subject %>...</p>
+    	<%=h post.body_bg_img %>
+	<%=h post.user_id %> -->
+  </div>
+	<div id="list_post_tags">
+		<% @tags = post.tag_list %>
+		<p id="post_tag_links">
+		<% @tags.each do |tag| %>
+		<%= link_to tag  %>
+		<%end%>
+		</p>
+	</div>
+	
+	<!--div id="list_post_actions">
+    	<%= link_to 'Show', post %>
+    	<%= link_to 'Edit', edit_post_path(post) %>
+	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
+	<%= link_to 'New post', new_post_path %>
+  </div>-->
+<% end %>
+</div>
+<%end %>
+<br />
