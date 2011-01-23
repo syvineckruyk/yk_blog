@@ -1,28 +1,52 @@
+<%= stylesheet_link_tag 'posts_show', :media => 'screen' %>
+<div id="show_post">
+<div id="show_post_title" class="title">
+<%=h @post.title %>
+</div>
+<div id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</div>
+<div id="show_post_bg_image">
+<%= image_tag("car_post_bg.jpg") %>
+<div id="sharethis" >
+<span class="st_email"></span><span class="st_facebook"></span><span class="st_twitter"></span><span class="st_sharethis" displayText="ShareThis"></span>
+</div>
+</div>
+<div id="post_show_header">
+	<div id="post_show_header_background">
+	</div>
+	 <div id="show_post_gravatar">
+  	<% link_to user_path(@post.user) do %>
+  	<%= gravatar_for @post.user %>
+  	<% end %>
+	</div>
+<p><i><%=h @post.subject %></i></p>
+<%= facebook_like %>
+</div>
+<div id="tag_box">
+<div id="tag_box_background">
+</div>
+	<div id="tag_box_header">
+	<p>tags</p>
+	</div>
+	<div id="tag_box_tags">
+	<% @tag_box_tags = @post.tags.find(:all) %>
+	<% @tag_box_tags.each do |tag| %>
+		<%= link_to tag.name %>
+	<% end %>
+	</div>
+</div>
+<div id="post_show_header_background">
+</div>
+<div id="post_show_post">
 <p>
-  <b>Title:</b>
-  <%=h @post.title %>
-</p>
-
-<p>
-  <b>Subject:</b>
-  <%=h @post.subject %>
-</p>
-
-<p>
-  <b>Body:</b>
   <%=h @post.body %>
 </p>
 
-<p>
-  <b>Body bg img:</b>
-  <%=h @post.body_bg_img %>
-</p>
-
-<p>
-  <b>User:</b>
-  <%=h @post.user_id %>
-</p>
-
-
+<!--
+<%=h @post.body_bg_img %>
+-->
+</div>
+<!--
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
+-->
+</div>

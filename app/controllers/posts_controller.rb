@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   # GET /posts.xml
   def index
     @title = "Posts"
-    @posts = Post.all
+    @posts = Post.all(:order => "id DESC")
     
     respond_to do |format|
       format.html # index.html.erb

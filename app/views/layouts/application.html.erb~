@@ -53,14 +53,14 @@
 	</div>
 	<div id="post_box">
 		<div id="post_text">
-			<div id="post_header">
+			<!--<div id="post_header">
 				<div id="left_post_header">
-				<!--<h1><%= h @title %></h1>--> 
+				<h1><%= h @title %></h1> 
 				</div>
 				<div id="right_post_header">
-			<!--<img src="<%=Gchart.bar(:data => [[45,60,50,80,40,100],[47,32,98,54,56,78],[3,6,7,8,12,23],[30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '800',:height=>'80',:legend =>['Posts','Users','Tools','Tags']) %> ">  -->
+			<img src="<%=Gchart.bar(:data => [[45,60,50,80,40,100],[47,32,98,54,56,78],[3,6,7,8,12,23],[30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '800',:height=>'80',:legend =>['Posts','Users','Tools','Tags']) %> "> 
 				</div>
-			</div>				
+			</div>-->				
 				<p><%= yield %></p>
 		</div>
 	
@@ -100,11 +100,11 @@
 -->	
 	</div>
 	<div id="footer">
-<!-- 	<a href="http://mysql.com">
+ 	<a href="http://mysql.com">
 		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
         src="http://www.mysql.com/common/logos/powered-by-mysql-88x31.png"
         alt="This site runs MySQL" height="31" width="88"
-		align="right"/></a> -->
+		align="right"/></a>
 	<a href="http://www.ruby-lang.org/en/">
 		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
 			src="/images/ruby_logo.png"

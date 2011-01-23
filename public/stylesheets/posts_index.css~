@@ -148,6 +148,7 @@ opacity:0.4;
 filter:alpha(opacity=100);
 /* CSS3 standard */
 opacity:1.0;
+color: #ff8600;
 }
 #tag_box_header p{
 /* for IE */

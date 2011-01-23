@@ -7,7 +7,8 @@ html, body{
 }
 #page_container{
 	width: 960px;
-		background-color: #2B252A;
+	background: black url(../images/nav_bg.png) repeat-y;
+	/*background-color: #2B252A;*/
 	margin: auto;
 }
 #header{
@@ -287,7 +288,7 @@ float:left;
 #bottom_nav{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;
-	height:35px;
+	height:100px;
 	margin-top:0px;
 }
 #bottom_nav  a.post_nav{
@@ -329,7 +330,8 @@ float:left;
 }
 #footer{
 	clear:both;
-	background: #15191C url(../images/footer_bg.png);
+	background: black url(../images/nav_bg.png) repeat-y;
+	/*background: #15191C url(../images/footer_bg.png);*/
 	color: #87845A;
 	height: 40px;
 	margin: 0px 0px 0px 0px;
