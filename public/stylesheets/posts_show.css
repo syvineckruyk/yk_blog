@@ -20,9 +20,12 @@ margin
 }
 #sharethis{
 	float:right;
-	width:281px;	
+	width:281px;
+	position:relative;
+	clear:left;
 }
 #show_post_title{
+	width: 600px;
 	float:left;
 	font-size: 26px;
 	margin-bottom: 0px;
@@ -37,7 +40,7 @@ margin
 	float:left;	
 	clear:left;
 	font-size: 10px;
-	width: 600px;
+	width: 900px;
 }
 #post_show_header{
 	width:600px;;
@@ -47,12 +50,12 @@ margin
 	margin-bottom: 5px;
 	position:relative;
 	float: left;
-	clear: both;
+	clear: left;
 }
 #post_show_header_background{
 	color: black;
 	background: #87845a;
-	clear: both;
+	clear: left;
 	/* for IE */
 	filter:alpha(opacity=25);
 	/* CSS3 standard */
@@ -88,7 +91,7 @@ margin
 #post_show_post{
 	width: 600px;
 	float: left;
-	clear: right;
+	clear: left;
 	position: relative;
 }
 #tag_box {

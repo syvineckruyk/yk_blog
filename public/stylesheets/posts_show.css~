@@ -2,37 +2,42 @@ h3{
 margin	
 }
 #show_post_bg_image{
-	width: 900px;
-	background: url(../images/car_post_bg.jpg);
-	/* for IE */
-	filter:alpha(opacity=50);
-	/* CSS3 standard */
-	opacity:0.50;
+	width: 281px;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
-	clear:both;
-	float: left;
+	float: right;
+	position: relative;
 }
 #show_post_bg_image img{
+	width: 281px;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
+	/* for IE 
+	filter:alpha(opacity=50);*/
+	/* CSS3 standard 
+	opacity:0.50;*/
+	margin-bottom: 10px;
+}
+#sharethis{
+	float:right;
+	width:281px;	
 }
 #show_post_title{
 	float:left;
-	clear: both;
-	width: 900px;
 	font-size: 26px;
 	margin-bottom: 0px;
-	margin-top: 0px;	
+	margin-top: 0px;
+	position: relative;	
 }
 #show_post_title.title{
-	font-weight: bold;	
+	font-weight: bold;
+	position: relative;	
 }
 #post_created{
-	clear: both;
 	float:left;	
+	clear:left;
 	font-size: 10px;
-	width: 100%;
+	width: 600px;
 }
 #post_show_header{
 	width:600px;;
@@ -86,10 +91,6 @@ margin
 	clear: right;
 	position: relative;
 }
-#sharethis{
-	float:right;
-	clear:right;	
-}
 #tag_box {
 float: right;
 width: 281px;
@@ -109,7 +110,7 @@ border-width: 2px;
 border-color: #15191C;
 -moz-border-radius:	10px;
 -webkit-border-radius: 10px;
-position: absolute;	
+position: relative;	
 }
 #tag_box_tags {
 margin: 10px 10px 10px 10px;	

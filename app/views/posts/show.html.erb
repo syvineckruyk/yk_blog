@@ -9,18 +9,6 @@
 <div id="sharethis" >
 <span class="st_email"></span><span class="st_facebook"></span><span class="st_twitter"></span><span class="st_sharethis" displayText="ShareThis"></span>
 </div>
-</div>
-<div id="post_show_header">
-	<div id="post_show_header_background">
-	</div>
-	 <div id="show_post_gravatar">
-  	<% link_to user_path(@post.user) do %>
-  	<%= gravatar_for @post.user %>
-  	<% end %>
-	</div>
-<p><i><%=h @post.subject %></i></p>
-<%= facebook_like %>
-</div>
 <div id="tag_box">
 <div id="tag_box_background">
 </div>
@@ -34,6 +22,19 @@
 	<% end %>
 	</div>
 </div>
+</div>
+<div id="post_show_header">
+	<div id="post_show_header_background">
+	</div>
+	 <div id="show_post_gravatar">
+  	<% link_to user_path(@post.user) do %>
+  	<%= gravatar_for @post.user %>
+  	<% end %>
+	</div>
+<p><i><%=h @post.subject %></i></p>
+<%= facebook_like %>
+</div>
+
 <div id="post_show_header_background">
 </div>
 <div id="post_show_post">
