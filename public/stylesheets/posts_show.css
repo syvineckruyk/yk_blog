@@ -25,7 +25,7 @@ margin
 	clear:left;
 }
 #show_post_title{
-	width: 600px;
+	width: 500px;
 	float:left;
 	font-size: 26px;
 	margin-bottom: 0px;
@@ -38,14 +38,17 @@ margin
 }
 #post_created{
 	float:left;	
-	clear:left;
+	clear:right;
 	font-size: 10px;
-	width: 900px;
+	width: 400px;
+	height: 30px;
+	vertical-align: bottom;
+	position:relative;
 }
 #post_show_header{
 	width:600px;;
 	float: left;
-	clear: both;
+	clear: left;
 	height: 80px;
 	margin-bottom: 5px;
 	position:relative;

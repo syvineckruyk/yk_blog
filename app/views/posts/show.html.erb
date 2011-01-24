@@ -3,7 +3,7 @@
 <div id="show_post_title" class="title">
 <%=h @post.title %>
 </div>
-<div id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</div>
+<p><div id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</div></p>
 <div id="show_post_bg_image">
 <%= image_tag("car_post_bg.jpg") %>
 <div id="sharethis" >
