@@ -45,6 +45,9 @@
 <!--
 <%=h @post.body_bg_img %>
 -->
+<%= image_tag @post.image.url %>
+<%= image_tag @post.image.url(:medium) %>
+<%= image_tag @post.image.url(:thumb) %>
 </div>
 <!--
 <%= link_to 'Edit', edit_post_path(@post) %> |

@@ -4,6 +4,14 @@
   <%= f.error_messages %>
 
   <p>
+    <%= f.label :user_id %><br />
+    <%= f.text_field :user_id %>
+  </p>
+  <p>
+    <%= f.file_field :image %>
+  </p>
+
+  <p>
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </p>
@@ -18,10 +26,6 @@
   <p>
     <%= f.label :body_bg_img %><br />
     <%= f.text_field :body_bg_img %>
-  </p>
-  <p>
-    <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
   </p>
   <p>
     <%= f.submit 'Create' %>

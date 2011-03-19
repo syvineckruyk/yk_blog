@@ -2,6 +2,9 @@
 
 <% form_for(@post) do |f| %>
   <%= f.error_messages %>
+  <p>
+    <%= f.file_field :image %>
+  </p>
 
   <p>
     <%= f.label :title %><br />
