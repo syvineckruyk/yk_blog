@@ -23,7 +23,8 @@ class Post < ActiveRecord::Base
 	                  #:path => ":rails_root/public/images/assets/post_attachments/:id/:style/:basename.:extension"
 			  :storage => :s3,
  			  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
- 			  :path => ":attachment/:id/:style.:extension"
+ 			  :path => "posts/attach/:attachment/:id/:style.:extension",
+			  :url => "/posts/attach/:attachment/:id/:style.:extension"
 	#validates_attachment_presence :image
 	#validates_attachment_size :image, :less_than => 5.megabytes
 	#validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
