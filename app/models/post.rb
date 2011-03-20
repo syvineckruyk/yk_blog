@@ -18,14 +18,14 @@ class Post < ActiveRecord::Base
 	belongs_to	:user
 	has_many	:tools
 	has_many	:sources
-	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "100x100>", :post_image_box => "281X100#"},
+	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "64x64>", :post_image_box => "281X"},
 	                  :url  => "/images/assets/post_attachments/:id/:style/:basename.:extension",
 	                  :path => ":rails_root/public/images/assets/post_attachments/:id/:style/:basename.:extension"
 	#validates_attachment_presence :image
 	#validates_attachment_size :image, :less_than => 5.megabytes
 	#validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
 	validates_presence_of(:title, :subject, :body)
-	validates_length_of :title , :maximum => 25
+	validates_length_of :title , :maximum => 30
 	validates_length_of :subject , :maximum => 80
 	acts_as_taggable
 end

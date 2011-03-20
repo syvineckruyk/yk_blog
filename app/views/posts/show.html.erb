@@ -5,7 +5,6 @@
 </div>
 <p><div id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</div></p>
 <div id="show_post_bg_image">
-<!--<%= image_tag("car_post_bg.jpg") %>-->
 <%= image_tag @post.image.url(:post_image_box) %>
 <div id="sharethis" >
 <span class="st_email"></span><span class="st_facebook"></span><span class="st_twitter"></span><span class="st_sharethis" displayText="ShareThis"></span>

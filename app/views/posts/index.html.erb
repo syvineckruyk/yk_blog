@@ -28,8 +28,9 @@
   <div id="list_post_background">
   </div>
   <div id="list_post_gravatar">
-  	<% link_to user_path(post.user) do %>
-  	<%= gravatar_for post.user %>
+  	<% link_to post_path(post) do %>
+  	<!--<%= gravatar_for post.user %> -->
+	<%= image_tag post.image.url(:thumb) %>
   	<% end %>
   	<p>
   		<%= time_ago_in_words(post.created_at) %>
