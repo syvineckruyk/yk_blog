@@ -32,7 +32,8 @@
   	<% end %>
 	</div>
 <p><i><%=h @post.subject %></i></p>
-<%= facebook_like %>
+<!--<%= facebook_like %>-->
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" width="450" font=""></fb:like>
 </div>
 
 <div id="post_show_header_background">
@@ -41,6 +42,8 @@
 <p>
   <%=h @post.body %>
 </p>
+
+<div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=140585652639954&amp;xfbml=1"></script><fb:comments href= <%=h post_url(@post) %> num_posts="10" width="600"></fb:comments>
 
 <!--
 <%=h @post.body_bg_img %>

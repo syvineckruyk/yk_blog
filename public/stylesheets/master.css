@@ -286,6 +286,12 @@ float:left;
 	margin: 5px 5px 0px 5px;
 }
 #bottom_nav{
+	background-color: white;
+	margin: 10px 20px 5px 20px;
+	-moz-border-radius:	10px;
+	-webkit-border-radius: 10px;
+	clear: both;}
+/*#bottom_nav{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;
 	height:100px;
@@ -327,7 +333,7 @@ float:left;
 	display:inline;
 	text-align:right;
 	margin: 0px 5px 0px 10px;
-}
+}*/
 #footer{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;
