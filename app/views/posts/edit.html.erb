@@ -3,7 +3,8 @@
 <% form_for(@post, :html => {:multipart => true}) do |f| %>
   <%= f.error_messages %>
   <p>
-    <%= f.file_field :image %>
+  <%= image_tag @post.image.url(:thumb) %>
+  <%= f.file_field :image %>  
   </p>
 
   <p>
@@ -12,16 +13,19 @@
   </p>
   <p>
     <%= f.label :subject %><br />
-    <%= f.text_field :subject %>
+    <%= f.text_area :subject %>
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_field :body %>
+    <%= f.text_area :body,:class => "mceEditor" %>
   </p>
+  
+<!--
   <p>
     <%= f.label :body_bg_img %><br />
     <%= f.text_field :body_bg_img %>
   </p>
+-->
   <p>
     <%= f.label :user_id %><br />
     <%= f.text_field :user_id %>
