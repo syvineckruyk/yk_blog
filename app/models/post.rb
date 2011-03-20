@@ -19,8 +19,11 @@ class Post < ActiveRecord::Base
 	has_many	:tools
 	has_many	:sources
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "72x72>", :post_image_box => "281X"},
-	                  :url  => "/images/assets/post_attachments/:id/:style/:basename.:extension",
-	                  :path => ":rails_root/public/images/assets/post_attachments/:id/:style/:basename.:extension"
+	                  #:url  => "/images/assets/post_attachments/:id/:style/:basename.:extension",
+	                  #:path => ":rails_root/public/images/assets/post_attachments/:id/:style/:basename.:extension"
+			  :storage => :s3,
+ 			  :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
+ 			  :path => ":attachment/:id/:style.:extension"
 	#validates_attachment_presence :image
 	#validates_attachment_size :image, :less_than => 5.megabytes
 	#validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
