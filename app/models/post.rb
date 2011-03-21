@@ -14,7 +14,7 @@
 #
 
 class Post < ActiveRecord::Base
-	attr_accessible(:title, :subject, :body, :body_bg_img, :image, :user_id,:image_file_name, :image_content_type, :image_file_size, :image_updated_at)
+	attr_accessible(:title, :subject, :body, :body_bg_img, :image, :user_id,:image_file_name, :image_content_type, :image_file_size, :image_updated_at, :tag_list)
 	belongs_to	:user
 	has_many	:tools
 	has_many	:sources
