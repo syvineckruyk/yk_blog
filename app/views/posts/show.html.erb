@@ -1,6 +1,10 @@
 <%= stylesheet_link_tag 'posts_show', :media => 'screen' %>
+<div id="post_inline_nav_top" class="post_inline_nav">
 <%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<%= link_to 'Back', posts_path %> |
+<%= link_to 'Previous', Post.find_by_id(@post.id - 1) %> |
+<%= link_to 'Next', Post.find_by_id(@post.id + 1) %>
+</div>
 <div id="show_post">
 <div id="show_post_title" class="title">
 <%=h @post.title %>
@@ -47,6 +51,12 @@
   <%= @post.body %>
 </p>
 <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#appId=149043065159894&amp;xfbml=1"></script><fb:comments href= <%=h post_url(@post) %> num_posts="10" width="600"></fb:comments>
+<div id="post_inline_nav_top" class="post_inline_nav">
+<%= link_to 'Edit', edit_post_path(@post) %> |
+<%= link_to 'Back', posts_path %> |
+<%= link_to 'Previous', Post.find_by_id(@post.id - 1) %> |
+<%= link_to 'Next', Post.find_by_id(@post.id + 1) %>
+</div>
 <!--
 <%=h @post.body_bg_img %>
 <%= image_tag @post.image.url %>
