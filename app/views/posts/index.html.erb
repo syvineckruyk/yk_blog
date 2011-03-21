@@ -43,7 +43,7 @@
   </div> 
   <div id="list_post_body">
 	<%=h post.subject %>
-  	<!--<%= post.body.first(145) %>
+	<!--<%= post.body.first(145) %>
     	<%=h post.body_bg_img %>
 	<%=h post.user_id %> -->
   </div>
@@ -62,6 +62,7 @@
 	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 	<%= link_to 'New post', new_post_path %>
   </div>-->
+<iframe src="http://www.facebook.com/plugins/comments.php?href=<% post_url(post)%>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:16px;" allowTransparency="true"></iframe> 
 <% end %>
 </div>
 <%end %>
