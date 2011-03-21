@@ -25,8 +25,6 @@
 
 <%= link_to 'new post', new_post_path %>
 <% @posts.each do |post| %>
-	<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post)%>"&permalink="1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:300px;" allowTransparency="true"></iframe>
-  
 <div id="list_post">
 <% link_to post do %>
   <div id="list_post_background">
@@ -47,7 +45,8 @@
   </div> 
   <div id="list_post_body">
 	<%=h post.subject %>
-	</br></br>	
+	</br></br>
+	<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post) %>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:130px; height:160px;" allowTransparency="true"></iframe> 
 	<!--<%= post.body.first(145) %>
     	<%=h post.body_bg_img %>
 	<%=h post.user_id %> -->
