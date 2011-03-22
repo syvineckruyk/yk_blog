@@ -12,7 +12,7 @@ html, body{
 	margin: auto;
 }
 #header{
-	background: #15191C url(/images/header_photo_bg.jpg) no-repeat 0px -160px;
+/*	background: #15191C url(/images/header_photo_bg.jpg) no-repeat 0px -160px;*/
 	height: 150px;
 	width: 960px;
 	color: #87845A;
