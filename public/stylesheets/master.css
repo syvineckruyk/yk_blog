@@ -19,12 +19,22 @@ html, body{
 }
 /* BEGIN INLINE NAV BAR---------------------------------------------- */
 .posts_inline_nav_bar{
-	width:900px;
+	width:600px;
 	float:left;
 	clear:both;
 	position:relative;
 	padding: 0px 5px 10px 0px;
 }
+.posts_inline_nav_bar_left{
+	float:left;
+	position:relative;
+	margin-right:40px;
+}
+.posts_inline_nav_bar_right{
+	float:right;
+	position:relative;
+}
+/* END INLINE NAV BAR---------------------------------------------- */
 /* BEGIN BUTTON CLASS ---------------------------------------------- */
 .button {
 	display: inline-block;
@@ -110,6 +120,7 @@ html, body{
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#ffffff');
 }
 /* END BUTTON CLASS---------------------------------------------- */
+/* BEGIN POST CREATED CLASS ---------------------------------------------- */
 .post_created{
 	float:right;	
 	clear:right;
@@ -118,7 +129,10 @@ html, body{
 	position:relative;
 	margin: 10px;
 }
-/* END INLINE NAV BAR---------------------------------------------- */
+/* END POST CREATED CLASS ---------------------------------------------- */
+/* BEGIN RIGHT CLASS ---------------------------------------------- */
+	float:right;
+/* END RIGHT CLASS ---------------------------------------------- */
 #login_box{
 background: black url(../images/login_box_bg.png) repeat-x;
 width:300px;
@@ -349,11 +363,6 @@ vertical-align: right;
 	text-decoration: none;
 	background-color:#ff8600;
 	padding: 17px 0px 17px 0px;
-/*	font-weight: bold;
-	border-style:solid;
-	border-color: #f8e7b3;
-	border-width: 4px; 
-*/
 }
 #post_text{
 background-color: white;
@@ -393,49 +402,6 @@ float:left;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
 	clear: both;}
-/*#bottom_nav{
-	clear:both;
-	background: black url(../images/nav_bg.png) repeat-y;
-	height:100px;
-	margin-top:0px;
-}
-#bottom_nav  a.post_nav{
-	display:block;
-	color: #87845a;
-	letter-spacing: 1px;
-	text-decoration: none;
-	font-weight: bold;
-	word-spacing: 2px;
-	text-align:right;
-	font-size: 12px;
-	float:right;
-	margin: 7px 5px 0px 20px;
-}
-#bottom_nav  a.post_nav:hover{
-	display:block;
-	color: #ff8600;
-	letter-spacing: 1px;
-	text-decoration: none;
-	font-weight: bold;
-	word-spacing: 2px;
-	text-align:right;
-	font-size: 12px;
-	float:right;
-	margin: 7px 5px 0px 20px;
-}
-#bottom_nav img{
-	float: left;
-	padding: 5px 0px 0px 5px;
-}
-#bottom_nav ul{
-	text-align:right;
-	margin: 0px 20px 0px 10px;
-}
-#bottom_nav li{
-	display:inline;
-	text-align:right;
-	margin: 0px 5px 0px 10px;
-}*/
 #footer{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;

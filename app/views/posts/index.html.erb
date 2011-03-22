@@ -40,7 +40,7 @@
   </div> 
   <div id="list_post_body">
 	<%=h post.subject %><br>
-  	<%= time_ago_in_words(post.created_at) %> ago
+  	<span class="post_created"><%= time_ago_in_words(post.created_at) %> ago</span>
 	<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post) %>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:16px;" allowTransparency="true"></iframe>
 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href=<%=h post_url(post)%> layout="button_count" show_faces="true" font=""></fb:like> 
   </div>
