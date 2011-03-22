@@ -4,14 +4,13 @@
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
 <div class="posts_inline_nav_bar">
 	<span class="posts_inline_nav_bar_left">
-		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %> 
+		<!--<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>-->
 		<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
 	</span>
-	<span class="posts_inline_nav_bar_left">
+	<span class="posts_inline_nav_bar_right">
 		<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small orange'  %>
 		<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small orange'  %>
 	</span>
-<span class="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</span>
 </div>
 <!--END POSTS INLINE NAVIGATION BAR-->
 
@@ -40,13 +39,13 @@
 </div>
 </div>
 <div id="post_show_header">
-	<div id="post_show_header_background">
-	</div>
+<div id="post_show_header_background"></div>
 	 <div id="show_post_gravatar">
   	<% link_to user_path(@post.user) do %>
   	<%= gravatar_for @post.user %>
   	<% end %>
 	</div>
+<span class="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</span>
 <p><i><%=h @post.subject %></i></p>
 <!--<%= facebook_like %>-->
 <fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>
@@ -60,13 +59,14 @@
 <p>
   <%= @post.body %>
 </p>
+<div id="post_show_header_background"></div>
 <div id="fb-root"></div><fb:comments href= <%=h post_url(@post) %> num_posts="10" width="600"></fb:comments>
 <div class="posts_inline_nav_bar">
 	<span class="posts_inline_nav_bar_left">
-		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small white'  %> 
+		<!--<%= link_to 'Edit', edit_post_path(@post),:class => 'button small white'  %>-->
 		<%= link_to 'Back', posts_path,:class => 'button small white'  %>
 	</span> 
-	<span class="points_inline_nav_bar_right">
+	<span class="posts_inline_nav_bar_right">
 		<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small white'  %>
 		<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small white'  %>
 	</span>

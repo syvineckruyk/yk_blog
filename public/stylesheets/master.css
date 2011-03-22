@@ -28,7 +28,6 @@ html, body{
 .posts_inline_nav_bar_left{
 	float:left;
 	position:relative;
-	margin-right:40px;
 }
 .posts_inline_nav_bar_right{
 	float:right;
@@ -130,9 +129,6 @@ html, body{
 	margin: 10px;
 }
 /* END POST CREATED CLASS ---------------------------------------------- */
-/* BEGIN RIGHT CLASS ---------------------------------------------- */
-	float:right;
-/* END RIGHT CLASS ---------------------------------------------- */
 #login_box{
 background: black url(../images/login_box_bg.png) repeat-x;
 width:300px;
