@@ -1,14 +1,12 @@
 <%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
-<!--<h1>Listing posts</h1>-->
-<!--
-  <tr>
-    <th>Title</th>
-    <th>Subject</th>
-    <th>Body</th>
-    <th>Body bg img</th>
-    <th>User</th>
-  </tr>
--->
+
+<!--BEGIN POSTS INLINE NAVIGATION BAR-->
+<div id="posts_inline_nav_bar">
+	<%= link_to 'new post', new_post_path,:class => 'button small orange' %>
+</div>
+<!--END POSTS INLINE NAVIGATION PAR-->
+
+<!--BEGIN TAG BOX ON RIGHT HAND SIDE-->
 <div id="tag_box">
 <div id="tag_box_background">
 </div>
@@ -22,8 +20,11 @@
 	<% end %>
 	</div>
 </div>
+<!--END TAG BOX ON RIGHT HAND SIDE-->
 
-<%= link_to 'new post', new_post_path %>
+
+
+<!--BEGIN POSTS LIST INDEX-->
 <% @posts.each do |post| %>
 <div id="list_post">
 <% link_to post do %>
@@ -31,10 +32,8 @@
   </div>
   <div id="list_post_gravatar">
   	<% link_to post_path(post) do %>
-  	<!--<%= gravatar_for post.user %> -->
 	<%= image_tag post.image.url(:thumb) %>
   	<% end %>
-	<!--<p class="list_post_user_name"><%= post.user.name %></p>-->
   </div>
   <div id="list_post_title">
   	<h4 class="list_post_title" id="list_post_title_text"><%=h post.title %><br></h4>
@@ -44,9 +43,6 @@
   	<%= time_ago_in_words(post.created_at) %> ago
 	<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post) %>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:16px;" allowTransparency="true"></iframe>
 <script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href=<%=h post_url(post)%> layout="button_count" show_faces="true" font=""></fb:like> 
-	<!--<%= post.body.first(145) %>
-    	<%=h post.body_bg_img %>
-	<%=h post.user_id %> -->
   </div>
 	<div id="list_post_tags">
 		<% @tags = post.tag_list %>
@@ -66,4 +62,5 @@
 <% end %>
 </div>
 <%end %>
+<!--END POSTS LIST INDEX-->
 <br />

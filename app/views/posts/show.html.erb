@@ -1,16 +1,22 @@
 <%= stylesheet_link_tag 'posts_show', :media => 'screen' %>
 <script src="http://connect.facebook.net/en_US/all.js#appId=149043065159894&amp;xfbml=1"></script>
-<div id="post_inline_nav_top" class="post_inline_nav">
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %> |
-<%= link_to 'Previous', Post.find_by_id(@post.id - 1) %> |
-<%= link_to 'Next', Post.find_by_id(@post.id + 1) %>
+
+<!--BEGIN POSTS INLINE NAVIGATION BAR-->
+<div id="posts_inline_nav_bar">
+
+<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %> 
+<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
+<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small orange'  %>
+<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small orange'  %>
+<span id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</span>
 </div>
+<!--END POSTS INLINE NAVIGATION BAR-->
+
+
 <div id="show_post">
 <div id="show_post_title" class="title">
 <%=h @post.title %>
 </div>
-<p><div id="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</div></p>
 <div id="show_post_bg_image">
 <%= image_tag @post.image.url(:post_image_box) %>
 <div id="sharethis" >
@@ -53,10 +59,10 @@
 </p>
 <div id="fb-root"></div><fb:comments href= <%=h post_url(@post) %> num_posts="10" width="600"></fb:comments>
 <div id="post_inline_nav_top" class="post_inline_nav">
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %> |
-<%= link_to 'Previous', Post.find_by_id(@post.id - 1) %> |
-<%= link_to 'Next', Post.find_by_id(@post.id + 1) %>
+<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %> 
+<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
+<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small orange'  %>
+<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small orange'  %>
 </div>
 <!--
 <%=h @post.body_bg_img %>
