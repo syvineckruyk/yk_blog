@@ -42,29 +42,12 @@
 <body>
 <div id="page_container">
 	<div id="header">
-		<!-- <img src="images/logo_header.png" alt="yk.com logo" style="padding-bottom:-20px" /> -->
 		<%= image_tag("logo_header.png", :alt => "yk.com logo") %>
-<!--		
-		<div id="login_box">
-			<img src="/images/login_icon.png" align="left" alt="login_icon" />
-			<p align="justify">login:<br />
-			password:</p>
-			<p id="login_submit" align="right">submit</p>
-		</div>
--->
 	</div>
 	<div id="top_nav">
 		<div id="menu_items">
-			<a href="/pages/home/">Home</a>
-			<a href="/posts/">
-<!-- <img class="menu_sparkline"  src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Posts</a> 
-			<a href="/tools/">
-<!--<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Tools</a>
-<!--			<a href="/tags/">
-<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">Tags</a>
-			<a href="/users/">
-<img class="menu_sparkline" src="<%=Gchart.sparkline(:data => [20,45,60,50,80,40,100],:bar_colors => '2B252A',:width => '15',:height => '15',:bg_color => '00051115', :bar_colors => 'ff8600') %>">-->Users</a>-->
-		</div>
+			<!--<a href="/pages/home/">Home</a>-->
+			<a href="/posts/">Posts</a> 
 		<div id="follow_box">
 			<a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"><span></span></a>
 			<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"><span></span></a>
@@ -72,65 +55,14 @@
 	</div>
 	<div id="post_box">
 		<div id="post_text">
-			<!--<div id="post_header">
-				<div id="left_post_header">
-				<h1><%= h @title %></h1> 
-				</div>
-				<div id="right_post_header">
-			<img src="<%=Gchart.bar(:data => [[45,60,50,80,40,100],[47,32,98,54,56,78],[3,6,7,8,12,23],[30,40,45,60,65,76]],:axis_with_labels => ['x,y'],:axis_labels => ['Mar|Apr|May|Jun|Jul|Aug'],:stacked => false,:bar_colors => '545344,2B252A,87845A,051115',:width => '800',:height=>'80',:legend =>['Posts','Users','Tools','Tags']) %> "> 
-				</div>
-			</div>-->				
 				<%= yield %>
 		</div>
-	
-<!--
-		<div class="meta_box" id="tool_box"><h2><img src="/images/tools_icon.png" align="right" alt="tools_icon"/>tool_box:</h2>
-			<ul>
-				<li><a href="#nodo">Tool 1</a></li>
-				<li><a href="#nodo">Tool 2</a></li>
-				<li><a href="#nodo">Tool 3</a></li>	
-			</ul>
-		</div>
-		<div class="meta_box" id="post_sources"><h2><img src="/images/sources_icon.png" align="right" alt="sources_icon"/>post_sources:</h2>
-			<ul>
-				<li><a href="#nodo">First source</a></li>
-				<li><a href="#nodo">Second source</a></li>
-				<li><a href="#nodo">Third source</a></li>
-				<li><a href="#nodo">Fourth source</a></li>
-			</ul>
-		</div>
-		<div class="meta_box" id="post_tags"><h2><img src="/images/tags_icon.png" align="right" alt="tags-icon" />post_tags:</h2>
-			<ul>
-				<li><a href="#nodo">tag 1</a></li>
-				<li><a href="#nodo">tag 2</a></li>
-				<li><a href="#nodo">tag 3</a></li>
-			</ul>
-		</div>-->
 		<div id="post_footer">	
 		</div>
 	</div>
 	<div id="bottom_nav">
-<!--		
-		<ul>
-			<li><a class="post_nav" href="#nogo" title="Next post">Next post</a></li>
-			<li><a class="post_nav" href="#nogo" title="Previous post">Previous post</a></li>
-		</ul>
--->	
 	</div>
 	<div id="footer">
-	<!--
- 	<a href="http://mysql.com">
-		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
-        src="http://www.mysql.com/common/logos/powered-by-mysql-88x31.png"
-        alt="This site runs MySQL" height="31" width="88"
-		align="right"/></a>
-	
-		<a href="/pages/charts/"  alt="Charts" title="Charts"><img src="<%=Gchart.bar(:data =>[20,45,60],:bar_colors => '2B252A',:width => '40',:height => '25',:bg_color => '00051115',:chart_background => '00051115', :bar_colors => '87845a', :bar_width_and_spacing => '6,2') %>"></a>
-		<a href="http://www.ruby-lang.org/en/">
-		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
-			src="/images/ruby_logo.png"
-			alt="Built with Ruby"
-			align="right"/></a>-->
 	<a href="http://rubyonrails.org/">
 		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
 		src="/images/rails_logo.png"
@@ -156,17 +88,6 @@
 		src="/images/prototype_logo.png" border="0"
 		alt="Using prototype"
 		align="right"/></a>
-<!--
-	<a href="http://jigsaw.w3.org/css-validator/check/referer">
-		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/css_logo.gif"
-		alt="Valid CSS!" /></a>
-    <a href="http://validator.w3.org/check?uri=referer">
-		<img style="border:0;width:88px;height:31px; margin: 5px 5px 5px 5px;"
-        src="/images/xhtml_logo.png"
-        alt="Valid XHTML 1.0 Transitional" height="31" width="88" /></a>
-	</div>
--->
 </div>
 	<%= debug(params) if Rails.env.development? %>
 </body>
