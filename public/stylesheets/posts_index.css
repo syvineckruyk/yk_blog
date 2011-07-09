@@ -118,6 +118,7 @@
 	font-size: 20px;
 	font-weight: bold;
 	height: 20px;
+	position: relative;
 }
 #list_post_content{
 	height: 50px;
@@ -180,6 +181,7 @@
 	font-size: 11px;
 	word-spacing: 6px;
 	vertical-align: bottom;
+	position: relative;
 }
 #list_post_tags a{
 	color: #87845a;

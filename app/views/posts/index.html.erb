@@ -34,8 +34,19 @@
 	<span class="list_post_created"><center><%= time_ago_in_words(post.created_at) %> ago</center></span>
   </div> 
   <div id="list_post_body">
-	<span id="list_post_title" class="list_post_content"><%=h post.title %></span>
-	<span id="list_post_content" class="list_post_content"><%=h post.subject %></span>
+	<%link_to post_path(post) do %>		
+	<span id="list_post_title" class="list_post_content">
+	<%=h post.title %>
+	<%end%>	
+	</span>
+	<span id="list_post_content" class="list_post_content">
+	<%link_to post_path(post) do %>	
+	<%=h post.subject %>
+	<%end%>	
+	</span>
+
+
+
 	<span id="list_post_tags" class="list_post_content">
 		<% @tags = post.tag_list %>
 		<% @tags.each do |tag| %>
