@@ -7,9 +7,8 @@
 <!--END POSTS INLINE NAVIGATION PAR-->
 
 <!--BEGIN TAG BOX ON RIGHT HAND SIDE-->
-<div id="tag_box">
-<div id="tag_box_background">
-</div>
+<div class="right_box">
+<div class="right_box_background"></div>
 	<div id="tag_box_header">
 	<p>tags</p>
 	</div>
@@ -19,13 +18,48 @@
 		<%= link_to tag.name %>
 	<% end %>
 	</div>
+<div class="right_box_background"></div>
+<div class="right_box_background"></div>
+	<div id="tag_box_header">
+	<p>more</p>
+	</div>
+	<div id="tag_box_tags">
+	<a href="#nodo">add more stuff</a>
+	</div>
+<div class="right_box_background"></div>
+<div class="right_box_background"></div>
+	<div id="tag_box_header">
+	<p>more</p>
+	</div>
+	<div id="tag_box_tags">
+	<a href="#nodo">add more stuff</a>
+	</div>
+<div class="right_box_background"></div>
+<div class="right_box_background"></div>
+	<div id="tag_box_header">
+	<p>more</p>
+	</div>
+	<div id="tag_box_tags">
+	<a href="#nodo">add more stuff</a>
+	</div>
+<div class="right_box_background"></div>
+<div class="right_box_background"></div>
+	<div id="tag_box_header">
+	<p>more</p>
+	</div>
+	<div id="tag_box_tags">
+	<a href="#nodo">add more stuff</a>
+	</div>
+<div class="right_box_background"></div>
 </div>
+
 <!--END TAG BOX ON RIGHT HAND SIDE-->
 
 
 
 <!--BEGIN POSTS LIST INDEX-->
 <% @posts.each do |post| %>
+<%link_to post_path(post) do %>	
 <div id="list_post">
   <div id="list_post_background">
   </div>
@@ -52,7 +86,8 @@
 		<% @tags.each do |tag| %>
 		<%= link_to tag  %>
 		<%end%>
-	
+	</span>
+	<%end%>
   </div>
 	<!--div id="list_post_actions">
     	<%= link_to 'Show', post %>

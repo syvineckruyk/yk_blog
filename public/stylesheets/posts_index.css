@@ -1,13 +1,14 @@
 /* BEGIN TAG BOX */
-#tag_box {
+.right_box {
 	float: right;
+	clear: right;
 	width: 281px;
 	height: 212px;
 	color: black;
 	position: relative;
 	margin: 0px 7px 5px 12px;
 }
-#tag_box_background {
+.right_box_background {
 	width: 281px;
 	background: #2B252A;
 	/* for IE */
@@ -19,7 +20,6 @@
 	border-color: #15191C;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
-	position: absolute;	
 }
 #tag_box_tags {
 	margin: 10px 10px 10px 10px;	
@@ -118,7 +118,6 @@
 	font-size: 20px;
 	font-weight: bold;
 	height: 20px;
-	position: relative;
 }
 #list_post_content{
 	height: 50px;
