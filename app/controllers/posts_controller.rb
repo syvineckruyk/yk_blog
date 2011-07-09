@@ -22,6 +22,17 @@ uses_tiny_mce
       format.xml  { render :xml => @post }
     end
   end
+def next
+  self.class.
+    order( "id" ).
+    where( "id > :id")
+end
+
+def previous
+  self.class.
+    order( "id DESC").
+    where( "id < :id")
+end
 
   # GET /posts/new
   # GET /posts/new.xml

@@ -27,39 +27,37 @@
 <!--BEGIN POSTS LIST INDEX-->
 <% @posts.each do |post| %>
 <div id="list_post">
-<% link_to post do %>
   <div id="list_post_background">
   </div>
-  <div id="list_post_gravatar">
-  	<% link_to post_path(post) do %>
-	<%= image_tag post.image.url(:thumb) %>
-  	<% end %>
-  </div>
-  <div id="list_post_title">
-  	<h4 class="list_post_title" id="list_post_title_text"><%=h post.title %><br></h4>
+  <div id="list_post_right">
+	<span class="list_post_thumbnail"><center><%= image_tag post.image(:thumb) %></center></span>
+	<span class="list_post_created"><center><%= time_ago_in_words(post.created_at) %> ago</center></span>
   </div> 
   <div id="list_post_body">
-	<%=h post.subject %><br>
-  	<span class="post_created"><%= time_ago_in_words(post.created_at) %> ago</span>
-	<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post) %>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:16px;" allowTransparency="true"></iframe>
-<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:like href=<%=h post_url(post)%> layout="button_count" show_faces="true" font=""></fb:like> 
-  </div>
-	<div id="list_post_tags">
+	<span id="list_post_title" class="list_post_content"><%=h post.title %></span>
+	<span id="list_post_content" class="list_post_content"><%=h post.subject %></span>
+	<span id="list_post_tags" class="list_post_content">
 		<% @tags = post.tag_list %>
-		<p id="post_tag_links">
 		<% @tags.each do |tag| %>
 		<%= link_to tag  %>
 		<%end%>
-		</p>
-	</div>
 	
+  </div>
 	<!--div id="list_post_actions">
     	<%= link_to 'Show', post %>
     	<%= link_to 'Edit', edit_post_path(post) %>
 	<%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %>
 	</div>-->
 
-<% end %>
+</div>
+<div id="list_post_social_bar">
+<span class="list_post_fb_like">
+<fb:like href=<%=h post_url(post)%> layout="button_count" show_faces="true" font=""></fb:like>
+</span>
+<span class="list_post_comment">
+<iframe src="http://www.facebook.com/plugins/comments.php?href=<%=h post_url(post) %>&permalink=1" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:100%; height:16px;" allowTransparency="true"></iframe></span>
+<script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script>
+</span>
 </div>
 <%end %>
 <!--END POSTS LIST INDEX-->

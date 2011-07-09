@@ -50,13 +50,27 @@
 /* END TAG BOX */
 
 
-
+#list_post_social_bar{
+	margin: 10px 0px 6px 0px;
+	width: 600px;
+	float: left;
+	clear: left;
+}
+.list_post_fb_like{
+	margin-left: 4px;
+	width: 66%;
+	display: inline-block;
+}
+.list_post_comment{
+	float: right;
+	width: 18%;
+	text-align:right;
+}
 #list_post{
 	position: relative;
 	width:600px;
 	height:100px;
 	clear: left;
-	margin-bottom: 12px;
 	float: left;
 }
 #list_post_background{
@@ -95,20 +109,24 @@
 	color: black;
 }
 
-#list_post_title{
-	float: left;
-	position: relative;
-	clear: right;
-	width: 84%;
-	height: 10px;
-	margin: 6px 0px 6px 0px;
+.list_post_content{
+	margin: 4px 0px 0px 6px;
+	width: 100%;
+	display: inline-block;
 }
-#list_post_gravatar{
-	width: 10%;
-	float: left;
+#list_post_title{
+	font-size: 20px;
+	font-weight: bold;
+	height: 20px;
+}
+#list_post_content{
+	height: 50px;
+}
+#list_post_right{
+	width: 15%;
+	float: right;
 	position: relative;
-	margin: 16px 16px 16px 16px;
-	float: auto;
+	margin: 16px 0px 0px 0px;
 	height: 100%;
 	font-size: 9px;
 	color: #2B252A;
@@ -118,7 +136,27 @@
 	opacity:0.9;
 	
 }
-#list_post_gravatar img:hover{
+.list_post_thumbnail{
+	height: 60px;
+	width: 100%;
+	display: inline-block;
+}
+.list_post_thumbnail img{
+	position:absolute;
+	top:-40px; 
+	bottom:0; 
+	left:0; 
+	right:0;
+	margin:auto 
+
+}
+.list_post_created{
+	width: 100%;
+	text-align: center;
+	display: inline-block;
+	margin-top: 10px;
+}
+#list_post_right img:hover{
 	/* for IE */
 	filter:alpha(opacity=30);
 	/* CSS3 standard */
@@ -126,10 +164,8 @@
 }
 #list_post_body{
 	height: 40px;
-	width: 84%;
+	width: 460px;
 	float: left;
-	clear: right;
-	margin: 10px 1px 1px 1px;
 	font-size: 14px;
 }
 #list_post_actions{
@@ -139,22 +175,11 @@
 	font-size: 12px;
 }
 
-#list_post h4.list_post_title{
-	/*color: #ff8600;*/
-	letter-spacing: 2px;
-	text-decoration: none;
-	font-weight: bold;
-	height:20px;
-/*	text-align:left;
-	margin: 5px 5px 5px 20px;
-	font-size: 20px; */
-}
 #list_post_tags{
-	width: 84%;
-	font-size: 11px;;
-	position: relative;
-	float: left;
+	display: block;
+	font-size: 11px;
 	word-spacing: 6px;
+	vertical-align: bottom;
 }
 #list_post_tags a{
 	color: #87845a;
@@ -162,4 +187,5 @@
 #list_post_tags a:hover{
 	color: #ff8600;
 }
+
 

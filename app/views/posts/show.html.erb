@@ -10,6 +10,7 @@
 	<span class="posts_inline_nav_bar_right">
 		<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small orange'  %>
 		<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small orange'  %>
+
 	</span>
 </div>
 <!--END POSTS INLINE NAVIGATION BAR-->
