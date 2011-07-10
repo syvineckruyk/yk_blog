@@ -1,7 +1,11 @@
 <%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
 
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
-<div class="posts_inline_nav_bar">	
+<div class="posts_inline_nav_bar">
+<div class="button small orange">
+<a href="/posts/">Posts</a> 
+<%= will_paginate @posts %>
+</div>	
 </div>
 <!--END POSTS INLINE NAVIGATION PAR-->
 
@@ -20,7 +24,8 @@
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
 	<div id="right_box_content">
-	<p>add more stuff</p>
+			<a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"><span></span></a>
+			<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"><span></span></a>
 	</div>
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
@@ -98,7 +103,10 @@
 </div>
 <%end %>
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
-<div class="posts_inline_nav_bar">	
+<div class="posts_inline_nav_bar">
+<div class="button small orange">
+<%= will_paginate @posts %>
+</div>	
 </div>
 <!--END POSTS INLINE NAVIGATION PAR-->
 <!--END POSTS LIST INDEX-->
