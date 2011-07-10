@@ -33,5 +33,5 @@ class Post < ActiveRecord::Base
 	validates_length_of :subject , :maximum => 80
 	acts_as_taggable
  	cattr_reader :per_page
-  	@@per_page = 5
+  	@@per_page = 4
 end
