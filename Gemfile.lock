@@ -24,6 +24,7 @@ GEM
       activesupport
     tiny_mce (0.1.4)
     tzinfo (0.3.25)
+    will_paginate (2.3.15)
     xml-simple (1.0.14)
 
 PLATFORMS
@@ -33,3 +34,4 @@ DEPENDENCIES
   aws-s3
   paperclip
   tiny_mce
+  will_paginate (~> 2.3.11)

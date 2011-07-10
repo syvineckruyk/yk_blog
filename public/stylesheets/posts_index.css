@@ -1,4 +1,14 @@
-/* BEGIN TAG BOX */
+/* BEGIN INLINE NAV BAR---------------------------------------------- */
+.posts_inline_nav_bar{
+	width:600px;
+	float:left;
+	clear:both;
+	position:relative;
+	padding: 0px 0px 0px 0px;
+	text-align: center;
+}
+/* END INLINE NAV BAR---------------------------------------------- */
+/* BEGIN RIGHT BOX */
 .right_box {
 	float: right;
 	clear: right;
@@ -21,17 +31,24 @@
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
 }
-#tag_box_tags {
+#right_box_content {
 	margin: 10px 10px 10px 10px;	
 	position: relative;
 }
-#tag_box_tags a{
+.tags a{
 	/* for IE */
 	filter:alpha(opacity=40);
 	/* CSS3 standard */
 	opacity:0.4;
 }
-#tag_box_tags a:hover{
+
+#right_box_content p{
+	/* for IE */
+	filter:alpha(opacity=40);
+	/* CSS3 standard */
+	opacity:0.4;
+}
+.tags a:hover{
 	/* for IE */
 	filter:alpha(opacity=100);
 	/* CSS3 standard */
@@ -46,6 +63,12 @@
 	float: left;
 	clear: left;
 	margin: 10px 10px 0px 10px;
+}
+#right_box_content p{
+	/* for IE */
+	filter:alpha(opacity=40);
+	/* CSS3 standard */
+	opacity:0.4;
 }
 /* END TAG BOX */
 
@@ -188,5 +211,7 @@
 #list_post_tags a:hover{
 	color: #ff8600;
 }
+
+/*TESTING SNIPPETS*/
 
 

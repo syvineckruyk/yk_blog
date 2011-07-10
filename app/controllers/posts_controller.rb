@@ -4,8 +4,8 @@ class PostsController < ApplicationController
 uses_tiny_mce
   def index
     @title = "Posts"
-    @posts = Post.all(:order => "id DESC")
-    
+    #@posts = Post.all(:order => "id DESC")
+    @posts = Post.paginate :page => params[:page], :order => 'created_at DESC'
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render :xml => @posts }
@@ -16,24 +16,12 @@ uses_tiny_mce
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
-
+    #@post = @post.paginate
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @post }
     end
   end
-def next
-  self.class.
-    order( "id" ).
-    where( "id > :id")
-end
-
-def previous
-  self.class.
-    order( "id DESC").
-    where( "id < :id")
-end
-
   # GET /posts/new
   # GET /posts/new.xml
   def new

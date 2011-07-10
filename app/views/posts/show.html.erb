@@ -6,10 +6,6 @@
 	<span class="posts_inline_nav_bar_left">
 		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
 		<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
-	</span>
-	<span class="posts_inline_nav_bar_right">
-		<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small orange'  %>
-		<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small orange'  %>
 
 	</span>
 </div>
@@ -67,10 +63,6 @@
 		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small white'  %>
 		<%= link_to 'Back', posts_path,:class => 'button small white'  %>
 	</span> 
-	<span class="posts_inline_nav_bar_right">
-		<%= link_to 'Previous', Post.find_by_id(@post.id - 1),:class => 'button small white'  %>
-		<%= link_to 'Next', Post.find_by_id(@post.id + 1),:class => 'button small white'  %>
-	</span>
 </div>
 </div>
 </div>

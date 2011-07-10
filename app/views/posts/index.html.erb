@@ -1,8 +1,7 @@
 <%= stylesheet_link_tag 'posts_index', :media => 'screen' %>
 
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
-<div class="posts_inline_nav_bar">
-	<%= link_to 'new post', new_post_path,:class => 'button small orange' %>
+<div class="posts_inline_nav_bar">	
 </div>
 <!--END POSTS INLINE NAVIGATION PAR-->
 
@@ -12,7 +11,7 @@
 	<div id="tag_box_header">
 	<p>tags</p>
 	</div>
-	<div id="tag_box_tags">
+	<div id="right_box_content" class="tags">
 	<% @tag_box_tags = Tag.find(:all) %>
 	<% @tag_box_tags.each do |tag| %>
 		<%= link_to tag.name %>
@@ -20,35 +19,26 @@
 	</div>
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
-	<div id="tag_box_header">
-	<p>more</p>
+	<div id="right_box_content">
+	<p>add more stuff</p>
 	</div>
-	<div id="tag_box_tags">
-	<a href="#nodo">add more stuff</a>
+<div class="right_box_background"></div>
+<div class="right_box_background"></div>
+	<div id="right_box_content">
+	<p>add more stuff</p>
 	</div>
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
 	<div id="tag_box_header">
-	<p>more</p>
+	<p>Administration</p>
 	</div>
-	<div id="tag_box_tags">
-	<a href="#nodo">add more stuff</a>
-	</div>
-<div class="right_box_background"></div>
-<div class="right_box_background"></div>
-	<div id="tag_box_header">
-	<p>more</p>
-	</div>
-	<div id="tag_box_tags">
-	<a href="#nodo">add more stuff</a>
+	<div id="right_box_content">
+	<%= link_to 'new post', new_post_path,:class => 'button small orange' %>
 	</div>
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
-	<div id="tag_box_header">
-	<p>more</p>
-	</div>
-	<div id="tag_box_tags">
-	<a href="#nodo">add more stuff</a>
+	<div id="right_box_content">
+	<p><%= page_entries_info @posts %></p>
 	</div>
 <div class="right_box_background"></div>
 </div>
@@ -106,4 +96,9 @@
 </span>
 </div>
 <%end %>
+<!--BEGIN POSTS INLINE NAVIGATION BAR-->
+<div class="posts_inline_nav_bar">	
+<p><%= will_paginate @posts %></p>
+</div>
+<!--END POSTS INLINE NAVIGATION PAR-->
 <!--END POSTS LIST INDEX-->
