@@ -2,7 +2,9 @@
 
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
 <div class="posts_inline_nav_bar">	
-<p><%= will_paginate @posts %></p>
+<div class="button small orange">
+<%= will_paginate @posts %>
+</div>
 </div>
 <!--END POSTS INLINE NAVIGATION PAR-->
 
@@ -34,7 +36,9 @@
 	<p>Administration</p>
 	</div>
 	<div id="right_box_content">
+	<%= link_to 'login', users_path,:class => 'button small orange' %>
 	<%= link_to 'new post', new_post_path,:class => 'button small orange' %>
+	<%= link_to 'users', users_path,:class => 'button small orange' %>
 	</div>
 <div class="right_box_background"></div>
 <div class="right_box_background"></div>
@@ -99,7 +103,9 @@
 <%end %>
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
 <div class="posts_inline_nav_bar">	
-<p><%= will_paginate @posts %></p>
+<div class="button small orange">
+<%= will_paginate @posts %>
+</div>
 </div>
 <!--END POSTS INLINE NAVIGATION PAR-->
 <!--END POSTS LIST INDEX-->
