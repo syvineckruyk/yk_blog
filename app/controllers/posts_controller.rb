@@ -2,6 +2,8 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.xml
 uses_tiny_mce
+require 'rubygems' 
+require 'twitter' 
   def index
     @title = "Posts"
     #@posts = Post.all(:order => "id DESC")
