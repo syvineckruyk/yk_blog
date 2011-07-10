@@ -1,3 +1,30 @@
+#tw_follow{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/twitter_icon.png) no-repeat 0px -30px;
+  margin: 0px 5px 5px 5px;
+}
+#tw_follow:hover{
+	background-position: 0px 0px;
+} 
+#tw_follow span{
+	display: none;
+} 
+#rss_follow{
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(../images/rss_icon.png) no-repeat 0px -30px;
+  margin: 0px 5px 5px 5px;
+}
+#rss_follow:hover{
+	background-position: 0px 0px;
+} 
+#rss_follow span{
+	display: none;
+}
+
 /* BEGIN INLINE NAV BAR---------------------------------------------- */
 .posts_inline_nav_bar{
 	width:100%;
