@@ -45,9 +45,12 @@
 		<%= image_tag("logo_header.png", :alt => "yk.com logo") %>
 	</div>
 	<div id="top_nav">
-		<div id="menu_items">
-	<!--		<a href="/pages/home/">Home</a>-->
-	</div>
+	<% if signed_in? %>
+	<%= gravatar_for @current_user %>
+	<%= link_to 'logout', signout_path,:class => 'button small white' ,:method => :delete %>
+	<%= link_to 'new post', new_post_path,:class => 'button small white' %>
+	<%= link_to 'users', users_path,:class => 'button small white' %>
+	<% end %>	
 	</div>
 	<div id="post_box">
 		<div id="post_text">
@@ -59,31 +62,6 @@
 	<div id="bottom_nav">
 	</div>
 	<div id="footer">
-	<!--<a href="http://rubyonrails.org/">
-		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/rails_logo.png"
-		alt="Built with Rails" 
-		align="right"/></a>
-	<a href="http://www.gimp.org/">
-		<img style="border:0;width:41px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/gimp_logo.png" border="0"
-		alt="Graphics by GIMP"
-		align="right"/></a>
-	<a href="http://notepad-plus.sourceforge.net/uk/site.htm">
-		<img style="border:0;width:37px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/notepad_logo.png" border="0"
-		alt="Made with Notepad++"
-		align="right"/></a>
-	<a href="http://script.aculo.us/">
-		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/scriptaculous_logo.png" border="0"
-		alt="Using scriptaculous"
-		align="right"/></a>
-	<a href="http://prototypejs.org/">
-		<img style="border:0;width:31px;height:31px; margin: 5px 5px 5px 5px;"
-		src="/images/prototype_logo.png" border="0"
-		alt="Using prototype"
-		align="right"/></a>-->
         <% flash.each do |key, value| %>
           <div class="flash <%= key %>"><%= value %></div>
         <% end %>

@@ -148,8 +148,11 @@ border-color: #15191C;
 }
 #top_nav{
 	background: black url(../images/nav_bg.png) repeat-y;
-	height: 30px;
-	width:960px;
+	width:600px;
+	margin: 20px 10px 10px 20px;
+	clear: both;
+	position: relative;
+	float: auto;
 }
 #menu_items{
 	height:30px;
