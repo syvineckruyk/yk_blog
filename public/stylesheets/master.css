@@ -18,6 +18,31 @@ html, body{
 	width: 960px;
 	color: #87845A;
 }
+/* BEGIN TOP NAV BAR---------------------------------------------- */
+#top_nav{
+	background: black url(../images/nav_bg.png) repeat-y;
+	width:900px;
+	margin: 20px 10px 10px 20px;
+	clear: both;
+	position: relative;
+	float: auto;
+}
+#signed_in_admin{
+	/*background-color: #2B252A;*/
+	/*background-color: white;*/
+	background-color: #2B252A;
+	width: 920px;
+	height: 65px;
+	float: left;
+	margin: 0px 0px 10px 0px;
+	position: relative;	
+	border-style:groove;
+	border-width: 2px;
+	border-color:#15191C;
+	-moz-border-radius:	10px;
+	-webkit-border-radius: 10px;
+}
+/* BEGIN TOP NAV BAR---------------------------------------------- */
 /* BEGIN INLINE NAV BAR---------------------------------------------- */
 .posts_inline_nav_bar{
 	width:600px;
@@ -145,14 +170,6 @@ border-color: #15191C;
 }
 #login_submit{
 	margin: -5px 5px 30px 30px;
-}
-#top_nav{
-	background: black url(../images/nav_bg.png) repeat-y;
-	width:600px;
-	margin: 20px 10px 10px 20px;
-	clear: both;
-	position: relative;
-	float: auto;
 }
 #menu_items{
 	height:30px;
