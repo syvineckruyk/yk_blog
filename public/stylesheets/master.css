@@ -30,8 +30,8 @@ html, body{
 #signed_in_admin{
 	/*background-color: #2B252A;*/
 	/*background-color: white;*/
-	background-color: #2B252A;
-	width: 920px;
+	/*background-color: #fef4e9;*/
+	width: 895px;
 	height: 65px;
 	float: left;
 	margin: 0px 0px 10px 0px;
@@ -102,6 +102,36 @@ html, body{
 	font-size: 11px;
 	padding: .2em 1em .275em;
 }
+/* orange_box */
+.orange_box {
+	color: #fef4e9;
+	border: solid 1px #da7c0c;
+	background: #f78d1d;
+	background: -webkit-gradient(linear, left top, left bottom, from(#faa51a), to(#f47a20));
+	background: -moz-linear-gradient(top,  ##faa51a,  #f47a20);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#faa51a', endColorstr='#f47a20');
+	/* for IE */
+  	/*filter:alpha(opacity=40);*/
+  	/* CSS3 standard */
+  	/*opacity:0.4;*/
+}
+.orange_box:hover {
+	/* for IE */
+  	filter:alpha(opacity=100);
+  	/* CSS3 standard */
+  	opacity:1.0;
+}
+/* white_box */
+.white_box {
+	background: #ededed;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+	background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+	/* for IE */
+  	filter:alpha(opacity=95);
+  	/* CSS3 standard */
+  	opacity:0.95;
+}
 /* orange */
 .orange {
 	color: #fef4e9;
@@ -131,6 +161,10 @@ html, body{
 	background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed));
 	background: -moz-linear-gradient(top,  #fff,  #ededed);
 	filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+	/* for IE */
+  	filter:alpha(opacity=100);
+  	/* CSS3 standard */
+  	opacity:1.0;
 }
 .white:hover {
 	background: #ededed;
