@@ -41,19 +41,26 @@ html, body{
 	border-color:#15191C;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
+	clear: none;
+}
+#admin_menu{
+	float: right;
+	position: relative;
+	margin-top: 17px;
 }
 /* BEGIN TOP NAV BAR---------------------------------------------- */
 /* BEGIN INLINE NAV BAR---------------------------------------------- */
 .posts_inline_nav_bar{
-	width:600px;
-	float:left;
+	width:900px;
+	float:right;
 	clear:both;
 	position:relative;
 	padding: 0px 5px 10px 0px;
 }
 .posts_inline_nav_bar_left{
-	float:left;
+	float:right;
 	position:relative;
+	margin-top: -10px;
 }
 .posts_inline_nav_bar_right{
 	float:right;

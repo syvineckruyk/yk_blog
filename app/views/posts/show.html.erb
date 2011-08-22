@@ -2,19 +2,23 @@
 <script src="http://connect.facebook.net/en_US/all.js#appId=149043065159894&amp;xfbml=1"></script>
 
 <!--BEGIN POSTS INLINE NAVIGATION BAR-->
-<div class="posts_inline_nav_bar">
+<!-- <div class="posts_inline_nav_bar">
 	<span class="posts_inline_nav_bar_left">
 		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
 		<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
 
 	</span>
-</div>
+</div> -->
 <!--END POSTS INLINE NAVIGATION BAR-->
 
 
 <div id="show_post">
 <div id="show_post_title" class="title">
-<%=h @post.title %>
+<%=h @post.title %><fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>
+<span class="posts_inline_nav_bar_left">
+	<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
+	<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
+</span>
 </div>
 <div id="show_post_bg_image">
 <%= image_tag @post.image.url(:post_image_box) %>
