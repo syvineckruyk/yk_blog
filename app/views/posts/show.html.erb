@@ -14,8 +14,9 @@
 
 <div id="show_post">
 <div id="show_post_title" class="title">
-<%=h @post.title %><fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>
+<%=h @post.title %>
 <span class="posts_inline_nav_bar_left">
+	<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>	
 	<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
 	<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
 </span>
@@ -48,8 +49,6 @@
 	</div>
 <span class="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</span>
 <p><i><%=h @post.subject %></i></p>
-<!--<%= facebook_like %>-->
-<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>
 <!--
 <a href="http://twitter.com/share" class="twitter-share-button" data-url=<%=h post_url(@post)%> data-count="horizontal" data-via="kruken">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 -->
