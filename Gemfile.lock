@@ -33,7 +33,7 @@ GEM
       rake (>= 0.8.3)
     rake (0.9.2)
     tiny_mce (0.1.4)
-    will_paginate (3.0.0)
+    will_paginate (2.3.16)
     xml-simple (1.1.0)
 
 PLATFORMS
@@ -44,4 +44,4 @@ DEPENDENCIES
   paperclip
   rails (= 2.3.8)
   tiny_mce
-  will_paginate
+  will_paginate (= 2.3.16)
