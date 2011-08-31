@@ -47,7 +47,7 @@
 	<div id="top_nav">
 	<% if signed_in? %>
 	<div class='small orange_box' id="signed_in_admin">
-	<span><%= gravatar_for @current_user, :class => 'button white_box' %></span>
+	<span id="nav_gravatar"><%= gravatar_for @current_user %></span>
 	<span id="admin_menu" class="button white_box">
 	<%= link_to 'logout', signout_path,:class => 'button small white' ,:method => :delete %>
 	<%= link_to 'new post', new_post_path,:class => 'button small white' %>
