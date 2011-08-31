@@ -64,10 +64,13 @@ html, body{
 	position:relative;
 	padding: 0px 5px 10px 0px;
 }
+#post_title{
+	margin-top: -20px;
+}
 .posts_inline_nav_bar_left{
 	float:right;
 	position:relative;
-	margin-top: -10px;
+	margin-top: -5px;
 }
 .posts_inline_nav_bar_right{
 	float:right;

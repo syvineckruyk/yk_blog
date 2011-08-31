@@ -14,7 +14,7 @@
 
 <div id="show_post">
 <div id="show_post_title" class="title">
-<%=h @post.title %>
+<span id="post_title"><%=h @post.title %></span>
 <span class="posts_inline_nav_bar_left">
 	<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>	
 	<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
