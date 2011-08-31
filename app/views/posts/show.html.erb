@@ -17,7 +17,9 @@
 <span id="post_title"><%=h @post.title %></span>
 <span class="posts_inline_nav_bar_left">
 	<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>	
-	<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
+	<% if signed_in? %>
+		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
+	<% end %>
 	<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
 </span>
 </div>
@@ -63,7 +65,9 @@
 <div id="fb-root"></div><fb:comments href= <%=h post_url(@post) %> num_posts="10" width="600"></fb:comments>
 <div class="posts_inline_nav_bar">
 	<span class="posts_inline_nav_bar_left">
-		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small white'  %>
+		<% if signed_in? %>
+			<%= link_to 'Edit', edit_post_path(@post),:class => 'button small white'  %>
+		<% end %>
 		<%= link_to 'Back', posts_path,:class => 'button small white'  %>
 	</span> 
 </div>
