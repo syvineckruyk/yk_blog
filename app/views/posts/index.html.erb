@@ -18,13 +18,13 @@
 	<div id="right_box_content" class="tags">
 	<% @tag_box_tags = Tag.find(:all) %>
 	<% @tag_box_tags.each do |tag| %>
-		<%= link_to tag.name %>
+		<%= link_to tag.name, { :action => :tag, :id => tag.name } %>
 	<% end %>
 	</div>
 <div class="right_box_background"></div>
 	<div id="right_box_content">
-		<a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"><span></span></a>
-		<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"><span></span></a>
+		<a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"><span></span></a><p>Follow me on Twitter</p>
+		<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"><span></span></a><p>Subscribe to RSS feed</p>
 	</div>
 <div class="right_box_background"></div>
 	<div id="right_box_content">
@@ -58,13 +58,10 @@
 	<%=h post.subject %>
 	<%end%>	
 	</span>
-
-
-
 	<span id="list_post_tags" class="list_post_content">
 		<% @tags = post.tag_list %>
 		<% @tags.each do |tag| %>
-		<%= link_to tag%>
+		<%= link_to tag %>
 		<%end%>
 	</span>
 	<%end%>
