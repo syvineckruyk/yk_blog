@@ -50,7 +50,7 @@
 	<span id="nav_gravatar"><%= gravatar_for @current_user %></span>
 	<span id="admin_menu" class="button white_box">
 	<%= link_to 'posts' , posts_path, :class => 'button small white' %>
-	<%= link_to 'tags' , tags_path, :class => 'button small white' %>
+	<%= link_to 'tag cloud' , tags_path, :class => 'button small white' %>
 	<%= link_to 'logout', signout_path,:class => 'button small white' ,:method => :delete %>
 	<%= link_to 'new post', new_post_path,:class => 'button small white' %>
 	<%= link_to 'users', users_path,:class => 'button small white' %>
