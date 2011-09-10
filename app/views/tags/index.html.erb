@@ -1,0 +1,6 @@
+<%= stylesheet_link_tag 'tags_index', :media => 'screen' %>
+<div id="tagcloud" class="sidebox">
+  <% tag_cloud(Post.tag_counts,%w(cloud1 cloud2 cloud3 cloud4)) do |tag, css_class| -%>
+    <%= link_to(tag.name, tag_path(tag), :class => css_class) %>
+  <% end %>
+</div>

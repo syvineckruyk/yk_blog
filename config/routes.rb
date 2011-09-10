@@ -4,7 +4,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :tools
 
   map.resources :posts
-
+  map.resources :tags
   map.resources :users
   map.resources :sessions, :only => [:new, :create, :destroy]
 

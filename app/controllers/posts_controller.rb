@@ -87,4 +87,10 @@ uses_tiny_mce
       end
     end
   end
+  def tag
+    @post = Post.find(params[:id])
+    @post.tag_list.add(params[:tags].split(','))
+    @post.save_tags
+    redirect_to(post_path(@post))
+  end
 end
