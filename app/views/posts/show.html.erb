@@ -20,7 +20,7 @@
 	<% if signed_in? %>
 		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
 	<% end %>
-	<%= link_to 'Back', posts_path,:class => 'button small orange'  %> 
+	<%= link_to 'Back', :back,:class => 'button small orange'  %> 
 </span>
 </div>
 <div id="show_post_bg_image">
