@@ -1,5 +1,6 @@
 class TagsController < ApplicationController
 def index
+  @title = "Tags"
   @tags = Tag.find(:all)
 end
 def show

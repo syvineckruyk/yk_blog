@@ -16,6 +16,7 @@ uses_tiny_mce
   # GET /posts/1.xml
   def show
     @post = Post.find(params[:id])
+    @title = "#{@post.title} - "
     #@post = @post.paginate
     respond_to do |format|
       format.html # show.html.erb
