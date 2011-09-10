@@ -59,10 +59,8 @@
 	<%end%>	
 	</span>
 	<span id="list_post_tags" class="list_post_content">
-		<% @tags = post.tag_list %>
-		<% @tags.each do |tag| %>
-		<%= link_to tag %>
-		<%end%>
+		<% @tags = post.tags %>
+		<%= clickable_tag_list(@tags) %>
 	</span>
 	<%end%>
   </div>
