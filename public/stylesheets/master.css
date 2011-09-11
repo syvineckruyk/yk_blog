@@ -387,6 +387,9 @@ width: 900px;
 float: right;
 vertical-align: right;
 }
+#post_box{
+	min-height:500px;
+}
 #post_box div.meta_box{
 	border-style:groove;
 	border-width: 2px;
@@ -409,6 +412,7 @@ background-color: white;
 margin: 10px 10px 10px 10px;
 width:900px;
 float:left;
+min-height:500px;
 }
 #tool_box{
 	background-color: #87845A;
