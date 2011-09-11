@@ -16,8 +16,9 @@
 	<p>tags</p>
 	</div>
 	<div id="right_box_content" class="tags">
-	<% @tag_box_tags = Tag.find(:all) %>
-	<%= clickable_tag_list(@tag_box_tags) %>
+	<% tag_cloud(Post.tag_counts,%w(cloud1 cloud2 cloud3 cloud4)) do |tag, css_class| -%>
+	<%= link_to(tag.name, tag_path(tag), :class => css_class) %>
+	<% end %>
 	
 	</div>
 <div class="right_box_background"></div>
