@@ -11,6 +11,12 @@
 
 <!--BEGIN TAG BOX ON RIGHT HAND SIDE-->
 <div class="right_box">
+<% if params[:controller] == "tags" %>
+<div class="right_box_background"></div>
+<div id="right_box_content">
+<p><%=  @title  %></p>
+</div>
+<% end %>
 <div class="right_box_background"></div>
 	<div id="tag_box_header">
 	<p>tags</p>

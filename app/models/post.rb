@@ -29,8 +29,8 @@ class Post < ActiveRecord::Base
 	#validates_attachment_size :image, :less_than => 5.megabytes
 	#validates_attachment_content_type :image, :content_type => ['image/jpeg', 'image/png']
 	validates_presence_of(:title, :subject, :body)
-	validates_length_of :title , :maximum => 30
-	validates_length_of :subject , :maximum => 80
+	validates_length_of :title , :maximum => 60
+	validates_length_of :subject , :maximum => 200
 	acts_as_taggable
  	cattr_reader :per_page
   	@@per_page = 5
