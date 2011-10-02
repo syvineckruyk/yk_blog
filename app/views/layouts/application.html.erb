@@ -55,20 +55,25 @@
 	<%= link_to 'new post', new_post_path,:class => 'button small white' %>
 	<%= link_to 'users', users_path,:class => 'button small white' %>
 	</span>
+	<% if params[:action]  == "show" and params[:controller] == "posts" %>
+	<span id="admin_menu" class="button white_box">
+		<%= link_to 'Destroy', @post, :class => 'button small orange', :confirm => 'Are you sure?', :method => :delete %>
+		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
+	</span>
+	<% end %>
 	</div>	
 	<% end %>	
 	</div>
 	<div id="post_box">
 		<div id="post_text">
+			<div id="flash_messages">
 			<% flash.each do |key, msg| %>
-				<div class='small orange_box'>
-				<%= content_tag :div, msg, :class => "flash", :id => key %>
-				</div>
-				<br>
+				<%= content_tag :div, msg, :class => "flash msgbox clean", :id => key %>
 				<% content_tag :script, :type => "text/javascript" do %>
-					setTimeout("new Effect.Fade('<%= key %>');", 10000);
+					setTimeout("new Effect.Fade('<%= key %>');", 5000);
 				<% end %>
 			<% end %>
+			</div>
 			<%= yield %>
 		</div>
 		<div id="post_footer">	

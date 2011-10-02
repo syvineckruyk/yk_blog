@@ -83,7 +83,7 @@ uses_tiny_mce
       @post = Post.find(params[:id])
       @post.destroy
       respond_to do |format|
-        format.html { redirect_to(posts_url) }
+        format.html { redirect_to(posts_url, :notice => 'Post was succesfully deleted')}
         format.xml  { head :ok }
       end
     end

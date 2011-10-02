@@ -12,12 +12,12 @@ def create
     render 'new'
   else
     sign_in user
-    redirect_to(root_url, :notice => 'Logging in to home')
+    redirect_to(root_url, :notice => 'Logged in')
   end
 end
 
   def destroy
     sign_out
-    redirect_to(root_url, :notice => 'Logging out')
+    redirect_to(root_url, :notice => 'Logged out')
   end
 end
