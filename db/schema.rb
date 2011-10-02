@@ -9,35 +9,47 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110711015253) do
+ActiveRecord::Schema.define(:version => 20111002034739) do
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "subject"
-    t.string   "body"
-    t.string   "body_bg_img"
-    t.integer  "user_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "image_file_name"
-    t.string   "image_content_type"
-    t.integer  "image_file_size"
-    t.datetime "image_updated_at"
+    t.string    "title"
+    t.string    "subject"
+    t.string    "body"
+    t.string    "body_bg_img"
+    t.integer   "user_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "image_file_name"
+    t.string    "image_content_type"
+    t.integer   "image_file_size"
+    t.timestamp "image_updated_at"
   end
 
-  create_table "sources", :force => true do |t|
-    t.string   "title"
-    t.string   "url"
-    t.integer  "post_id"
+  create_table "slugs", :force => true do |t|
+    t.string   "name"
+    t.integer  "sluggable_id"
+    t.integer  "sequence",                     :default => 1, :null => false
+    t.string   "sluggable_type", :limit => 40
+    t.string   "scope"
     t.datetime "created_at"
-    t.datetime "updated_at"
+  end
+
+  add_index "slugs", ["name", "sluggable_type", "sequence", "scope"], :name => "index_slugs_on_n_s_s_and_s", :unique => true
+  add_index "slugs", ["sluggable_id"], :name => "index_slugs_on_sluggable_id"
+
+  create_table "sources", :force => true do |t|
+    t.string    "title"
+    t.string    "url"
+    t.integer   "post_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "taggings", :force => true do |t|
-    t.integer  "tag_id"
-    t.integer  "taggable_id"
-    t.string   "taggable_type"
-    t.datetime "created_at"
+    t.integer   "tag_id"
+    t.integer   "taggable_id"
+    t.string    "taggable_type"
+    t.timestamp "created_at"
   end
 
   add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
@@ -48,25 +60,25 @@ ActiveRecord::Schema.define(:version => 20110711015253) do
   end
 
   create_table "tools", :force => true do |t|
-    t.string   "name"
-    t.string   "developer"
-    t.string   "description"
-    t.string   "rating"
-    t.string   "url"
-    t.integer  "user_id"
-    t.integer  "post_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.string    "developer"
+    t.string    "description"
+    t.string    "rating"
+    t.string    "url"
+    t.integer   "user_id"
+    t.integer   "post_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "encrypted_password"
-    t.string   "salt"
-    t.string   "remember_token"
+    t.string    "name"
+    t.string    "email"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "encrypted_password"
+    t.string    "salt"
+    t.string    "remember_token"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

@@ -16,6 +16,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 	attr_accessible(:name, :email, :password, :password_confirmation)
 	validates_confirmation_of :password
+	has_friendly_id :name
 	has_many	:posts
 	has_many	:tools
 	validates_presence_of(:name, :email)
@@ -61,5 +62,4 @@ class User < ActiveRecord::Base
 		def secure_hash(string)
 			Digest::SHA2.hexdigest(string)
 		end
-	
 end
