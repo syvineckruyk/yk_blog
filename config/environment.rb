@@ -34,7 +34,7 @@ Rails::Initializer.run do |config|
   # Set Time.zone default to the specified zone and make Active Record auto-convert to this zone.
   # Run "rake -D time" for a list of tasks for finding time zone names.
   config.time_zone = 'UTC'
-  config.gem "googlecharts", :lib => "gchart"
+  #config.gem "googlecharts", :lib => "gchart"
   config.gem 'mime-types', :lib => 'mime/types'
   config.gem 'paperclip', :source => 'http://rubygems.org'
   config.gem 'tiny_mce'
