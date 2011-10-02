@@ -4,6 +4,7 @@ class UsersController < ApplicationController
   in_place_edit_for :user, :email 
   in_place_edit_for :user, :password
 def index
+  if signed_in?
    @title = "Users"
    @users = User.all
    		
@@ -13,21 +14,25 @@ def index
 	
     end
   end
+  end
 
   # GET /users/1
   # GET /users/1.xml
   def show
+    if signed_in?
   	@user = User.find(params[:id])
 	@title = "User"
 	  respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @user }
-    end
+      end
+    end  
   end
 
   # GET /users/new
   # GET /users/new.xml
   def new
+    if signed_in?
     @user = User.new
 	@title = "New User"
 
@@ -35,16 +40,20 @@ def index
       format.html # new.html.erb
       format.xml  { render :xml => @user }
     end
+    end
   end
 
   # GET /users/1/edit
   def edit
+    if signed_in?
     @user = User.find(params[:id])
+    end
   end
 
   # POST /users
   # POST /users.xml
   def create
+    if signed_in?
     @user = User.new(params[:user])
     respond_to do |format|
       if @user.save
@@ -57,13 +66,14 @@ def index
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
+   end 
   end
 
   # PUT /users/1
   # PUT /users/1.xml
   def update
+   if signed_in? 
     @user = User.find(params[:id])
-
     respond_to do |format|
       if @user.update_attributes(params[:user])
         format.html { redirect_to(@user, :notice => 'User was successfully updated.') }
@@ -73,11 +83,13 @@ def index
         format.xml  { render :xml => @user.errors, :status => :unprocessable_entity }
       end
     end
+    end
   end
 
   # DELETE /users/1
   # DELETE /users/1.xml
   def destroy
+    if signed_in?
     @user = User.find(params[:id])
     @user.destroy
 
@@ -85,5 +97,6 @@ def index
       format.html { redirect_to(users_url) }
       format.xml  { head :ok }
     end
-  end
+    end
+    end
 end
