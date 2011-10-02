@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
 	attr_accessor :password
 	attr_accessible(:name, :email, :password, :password_confirmation)
 	validates_confirmation_of :password
-	has_friendly_id :name
+	has_friendly_id :name, :use_slug => true
 	has_many	:posts
 	has_many	:tools
 	validates_presence_of(:name, :email)
