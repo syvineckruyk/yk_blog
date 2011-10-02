@@ -18,6 +18,7 @@ class Post < ActiveRecord::Base
 	belongs_to	:user
 	has_many	:tools
 	has_many	:sources
+	has_friendly_id :title
 	has_attached_file :image, :styles => { :medium => "300x300>", :thumb => "72x60>", :post_image_box => "281X"},
 	                  #:url  => "/images/assets/post_attachments/:id/:style/:basename.:extension",
 	                  #:path => ":rails_root/public/images/assets/post_attachments/:id/:style/:basename.:extension"

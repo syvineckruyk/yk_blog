@@ -17,6 +17,9 @@ GEM
       xml-simple
     builder (3.0.0)
     cocaine (0.2.0)
+    friendly_id (3.0.6)
+      activerecord (>= 2.2)
+      activesupport (>= 2.2)
     mime-types (1.16)
     paperclip (2.3.16)
       activerecord (>= 2.3.0)
@@ -41,6 +44,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-s3
+  friendly_id (= 3.0.6)
   paperclip
   rails (= 2.3.8)
   tiny_mce
