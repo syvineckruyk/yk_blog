@@ -21,7 +21,7 @@
 	<div id="tag_box_header">
 	<p>tags</p>
 	</div>
-	<div id="right_box_content" class="tags cloud tag">
+	<div id="right_box_content" class="tags">
 	<% tag_cloud(Post.tag_counts,%w(cloud1 cloud2 cloud3 cloud4)) do |tag, css_class| -%>
 	<%= link_to(tag.name, tag_path(tag), :class => css_class ) %>
 	<% end %>
@@ -32,8 +32,8 @@
 	<p>follow me</p>
 	</div>
 	<div id="right_box_content">
-		<span><a id="tw_follow" href="http://twitter.com/kruken" title="follow me on twitter"></a>
-		<a id="rss_follow" href="#nogo" title="subscribe to RSS feed"></span></a>
+		<span class="twitter follow"><a href="http://twitter.com/kruken" title="follow me on twitter"></a></span>
+		<span class="rss follow"><a href="#nogo" title="subscribe to RSS feed"></a></span>
 	</div>
 <div class="right_box_background"></div>
 	<div id="right_box_content">
