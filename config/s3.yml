@@ -7,4 +7,4 @@ production:
 development:
  access_key_id: AKIAIQ7QLKWST2R6B4YQ
  secret_access_key: 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
- bucket: ykblog-prod
+ bucket: ykblog-dev
