@@ -57,7 +57,7 @@
 	</span>
 	<% if params[:action]  == "show" and params[:controller] == "posts" %>
 	<span id="admin_menu" class="button white_box">
-		<%= link_to 'Destroy', @post, :class => 'button small orange', :confirm => 'Are you sure?', :method => :delete %>
+		<%= link_to 'Destroy', @post, :class => 'button small orange', :confirm => 'This post will be deleted from the database. Do you want to continue?', :method => :delete %>
 		<%= link_to 'Edit', edit_post_path(@post),:class => 'button small orange'  %>
 	</span>
 	<% end %>

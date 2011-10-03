@@ -4,7 +4,12 @@ html, body{
 	margin: 0;
 	padding: 0;
 	font-family: arial;
+	text-decoration: none;
+}
+body a{
+	text-decoration: none;
 	color: #051115;
+	
 }
 #page_container{
 	width: 960px;
@@ -251,19 +256,7 @@ html, body{
 	margin: 10px;
 }
 /* END POST CREATED CLASS ---------------------------------------------- */
-#login_box{
-background: black url(../images/login_box_bg.png) repeat-x;
-width:300px;
-height:85px;
-margin: 30px 30px 30px 30px;
-float:right;
-border-style: groove;
-border-width: 2px;
-border-color: #15191C;
--moz-border-radius:	10px;
--webkit-border-radius: 10px;
 
-}
 #login_submit{
 	margin: -5px 5px 30px 30px;
 }
@@ -442,44 +435,12 @@ vertical-align: right;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
 }
-#post_box a{
-	text-decoration: none;
-	color:#051115
-	
-}
-#post_tags a:hover{
-	text-decoration: none;
-	background-color:#ff8600;
-	padding: 17px 0px 17px 0px;
-}
 #post_text{
 background-color: white;
 margin: 10px 10px 10px 10px;
 width:900px;
 float:left;
 min-height:500px;
-}
-#tool_box{
-	background-color: #87845A;
-	margin: 10px 10px 10px 10px;
-	width:293px;
-	float:right;
-}
-#post_sources{
-	background-color: #87845A;
-	margin: 5px 10px 10px 10px;
-	width:293px;
-	float:right;
-}
-#post_tags{
-	clear:both;
-	background-color: #87845A;
-	margin: 10px 10px 10px 10px;
-	width:293px;
-	float:right;
-}
-#post_tags li{
-	display: inline;
 }
 .sidebox {
   border: 2px solid black;
@@ -489,19 +450,15 @@ min-height:500px;
 }
 .cloud1 {
   font-size: 0.5em;
-  color: blue;
 }
 .cloud2 {
   font-size: 0.8em;
-  color: darkblue;
 }
 .cloud3 {
   font-size: 1.1em;
-  color: purple;
 }
 .cloud4 {
   font-size: 1.4em;
-  color: darkpurple;
 }
 #post_footer{
 	clear:both;
@@ -512,7 +469,8 @@ min-height:500px;
 	margin: 10px 20px 5px 20px;
 	-moz-border-radius:	10px;
 	-webkit-border-radius: 10px;
-	clear: both;}
+	clear: both;
+}
 #footer{
 	clear:both;
 	background: black url(../images/nav_bg.png) repeat-y;

@@ -21,9 +21,9 @@
 	<div id="tag_box_header">
 	<p>tags</p>
 	</div>
-	<div id="right_box_content" class="tags">
+	<div id="right_box_content" class="tags cloud tag">
 	<% tag_cloud(Post.tag_counts,%w(cloud1 cloud2 cloud3 cloud4)) do |tag, css_class| -%>
-	<%= link_to(tag.name, tag_path(tag), :class => css_class) %>
+	<%= link_to(tag.name, tag_path(tag), :class => css_class ) %>
 	<% end %>
 	
 	</div>

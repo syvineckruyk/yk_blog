@@ -17,7 +17,10 @@
   </p>
   <p>
     <%= f.label :body %><br />
-    <%= f.text_area :body,:class => "mceEditor" %>
+    <%= f.text_area :body,:class => "mceEditor", :theme => 'advanced',
+                            :theme_advanced_resizing => true,
+                            :theme_advanced_resize_horizontal => false,
+                            :plugins => %w{ table fullscreen } %>
   </p>
     <p>
 <%= text_field :post, :tag_list %> * separated with commas
