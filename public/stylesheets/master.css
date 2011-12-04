@@ -76,6 +76,8 @@ body a{
 	float:right;
 	position:relative;
 	margin-top: -5px;
+	height: 30px;
+	margin-top: 6px;
 }
 .posts_inline_nav_bar_right{
 	float:right;
@@ -254,6 +256,7 @@ body a{
 	vertical-align: bottom;
 	position:relative;
 	margin: 10px;
+	height: 90px
 }
 /* END POST CREATED CLASS ---------------------------------------------- */
 
@@ -546,4 +549,5 @@ field_with_errors {
   font-size: 12px;
   list-style: square;
 }
+
 

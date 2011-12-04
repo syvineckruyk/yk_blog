@@ -41,7 +41,7 @@ margin
 	width:600px;;
 	float: left;
 	clear: left;
-	height: 80px;
+	height: 100px;
 	margin-bottom: 5px;
 	position:relative;
 	float: left;
@@ -135,4 +135,18 @@ opacity:0.2;
 float: left;
 clear: left;
 margin: 10px 10px 0px 10px;
+}
+
+.fb_edge_widget_with_comment{
+	margin-top: 20px;
+	margin-bottom: 15px;
+	margin-left: 20px;
+}
+
+#fb-like-box{
+float: right;
+width: 281px;
+color: black;
+position: relative;
+margin: 0px 7px 5px 12px;
 }

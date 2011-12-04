@@ -15,8 +15,7 @@
 <div id="show_post">
 <div id="show_post_title" class="title">
 <span id="post_title"><%=h @post.title %></span>
-<span class="posts_inline_nav_bar_left">
-	<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like>	
+<span class="posts_inline_nav_bar_left">	
 	<%= link_to 'Back', :back,:class => 'button small orange'  %> 
 </span>
 </div>
@@ -37,6 +36,7 @@
 </p>
 	</div>
 </div>
+<div class="fb-like-box" data-href=post_url(@post) data-width="285" data-show-faces="true" data-stream="true" data-header="false"></div>
 </div>
 <div id="post_show_header">
 <div id="post_show_header_background"></div>
@@ -45,7 +45,8 @@
   	<%= gravatar_for @post.user %>
   	<% end %>
 	</div>
-<span class="post_created">posted <%= time_ago_in_words(@post.created_at) %> ago</span>
+<span class="post_created">
+<fb:like href=<%=h post_url(@post)%> layout="button_count" show_faces="true" font=""></fb:like><br>posted <%= time_ago_in_words(@post.created_at) %> ago<br></span>
 <p><i><%=h @post.subject %></i></p>
 <!--
 <a href="http://twitter.com/share" class="twitter-share-button" data-url=<%=h post_url(@post)%> data-count="horizontal" data-via="kruken">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
