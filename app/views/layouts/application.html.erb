@@ -53,6 +53,7 @@
 		<%= image_tag("logo_header.png", :alt => "yk.com logo") %>
 	</div>
 	<div id="top_nav">
+		<div class="fb-login-button" data-show-faces="false" data-width="200" data-max-rows="1"></div>
 	<% if signed_in? %>
 	<div class='small orange_box' id="signed_in_admin">
 	<span id="nav_gravatar"><%= gravatar_for @current_user %></span>

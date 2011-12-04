@@ -27,7 +27,7 @@ body a{
 #top_nav{
 	background: black url(../images/nav_bg.png) repeat-y;
 	width:900px;
-	margin: 20px 10px 10px 20px;
+	margin: 0px 10px 10px 20px;
 	clear: both;
 	position: relative;
 	float: auto;
@@ -39,7 +39,7 @@ body a{
 	width: 895px;
 	height: 65px;
 	float: left;
-	margin: 0px 0px 10px 0px;
+	margin: 10px 0px 10px 0px;
 	position: relative;	
 	border-style:groove;
 	border-width: 2px;
@@ -550,4 +550,6 @@ field_with_errors {
   list-style: square;
 }
 
-
+.fb-login-button{
+	margin-top: 10px;
+}
